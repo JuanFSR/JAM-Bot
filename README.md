@@ -44,7 +44,7 @@ O JAM é um chatbot que ajuda comerciantes e compradores com seus anúncios e pe
 $ sudo apt install python3
 ```
 
-#### Rasa
+#### Instalar dependências
 
 ```
 $ pip3 install -r requirements.txt
