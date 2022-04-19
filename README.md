@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://scontent-gru1-1.xx.fbcdn.net/v/t39.30808-6/277351319_101993069147921_6300197072559377247_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=nENpuxahZsEAX_Vmlx1&_nc_ht=scontent-gru1-1.xx&oh=00_AT97duWRQ_taS77Qt3T5IZAryfTvjaA8pWMNAc4XXqmZAA&oe=6260B1B7" alt="Logo do JAM Bot" width="120">
+  <img src="imgs/logo.png" alt="Logo do JAM Bot" width="120">
   <br>
  	JAM Bot - Just an Automated Marketplace
   <br>
@@ -47,7 +47,7 @@ $ sudo apt install python3
 #### Rasa
 
 ```
-$ pip3 install rasa
+$ pip3 install -r requirements.txt
 ```
 
 ---
