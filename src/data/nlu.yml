@@ -7,6 +7,7 @@ nlu:
     - ei
     - olá
     - oi
+    - oie
     - e aí
     - eai
     - bom dia
@@ -61,7 +62,9 @@ nlu:
     - perfeito
     - bom
     - ótimo
+    - muito bom
     - maravilha
+    - maravilhoso
     - me sentindo ótimo
     - me sentindo bem
     - me sentindo uma maravilha
@@ -88,10 +91,14 @@ nlu:
     - extremamente triste
     - estou pra baixo
     - estou deprê
+    - muito ruim
+    - muito triste
 
 - intent: bot_challenge
   examples: |
     - você é um bot?
     - você é humano?
+    - você é uma pessoa?
     - estou conversando com um bot?
     - estou conversando com um humano?
+    - estou conversando com uma pessoa?
