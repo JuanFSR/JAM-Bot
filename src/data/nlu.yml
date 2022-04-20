@@ -46,3 +46,15 @@ nlu:
       - você é uma pessoa?
       - eu estou falando com um bot?
       - eu estou falando com um ser humano?
+
+  - intent: vender
+    examples: |
+      - quero vender um celular
+      - colocar produto a venda
+      - vendo um celular
+      - vendo celulares
+      - como que vendo
+      - venda celular
+      - quero vender
+      - vender
+      - venda
