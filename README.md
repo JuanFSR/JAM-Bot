@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="imgs/logo.png" alt="Logo do JAM Bot" width="120">
+  <img src="assets/imgs/logo.png" alt="Logo do JAM Bot" width="120">
   <br>
  	JAM Bot - Just an Automated Marketplace
   <br>

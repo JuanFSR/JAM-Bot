@@ -1,3 +1,4 @@
 models/
 .rasa/
 credentials.yml
+src/cache/
