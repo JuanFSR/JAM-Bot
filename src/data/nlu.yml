@@ -58,3 +58,12 @@ nlu:
       - quero vender
       - vender
       - venda
+
+  - intent: compra
+    examples: |
+      - quero comprar
+      - quero comprar um celular
+      - desejo comprar um celular
+      - desejo comprar 
+      - comprar
+      - compra
