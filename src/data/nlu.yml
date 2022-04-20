@@ -4,88 +4,93 @@ nlu:
 - intent: greet
   examples: |
     - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - ei
+    - olá
+    - oi
+    - e aí
+    - eai
+    - bom dia
+    - boa tarde
+    - boa noite
+    - bomdia
+    - boatarde
+    - boanoite
+    - bora
+    - vamos lá
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - até
+    - até mais
+    - até logo
+    - até depois
+    - tchau
+    - xau
+    - adeus
+    - sair
+    - fechar
+    - tenha um bom dia
+    - tenha uma boa tarde
+    - tenha uma boa noite
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - sim
+    - s
+    - isso
+    - certo
+    - tá bom
+    - tá bem
+    - está bem
+    - ok
+    - okay
+    - ahamn
 
 - intent: deny
   examples: |
-    - no
+    - não
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - ñ
+    - nao
+    - nunca
+    - jamais
+    - acho que não
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - perfeito
+    - bom
+    - ótimo
+    - maravilha
+    - me sentindo ótimo
+    - me sentindo bem
+    - me sentindo uma maravilha
+    - super empolgado
+    - estou bem
+    - muito bem
+    - muitíssimo bem
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - meu dia foi péssimo
+    - estou péssimo
+    - não me sinto bem
+    - estou chateado
+    - super triste
+    - estou tão triste
+    - triste
+    - tão triste
+    - não estou feliz
+    - não estou satisfeito
+    - não tão bem
+    - não estou bem
+    - extremamente triste
+    - estou pra baixo
+    - estou deprê
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - você é um bot?
+    - você é humano?
+    - estou conversando com um bot?
+    - estou conversando com um humano?
