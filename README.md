@@ -50,4 +50,15 @@ $ sudo apt install python3
 $ pip3 install -r requirements.txt
 ```
 
+#### Treinar modelo
+```
+$ cd src
+$ rasa train
+```
+
+#### Executar modelo
+```
+$ rasa shell models/{{modelo}}.tar.gz
+```
+
 ---
