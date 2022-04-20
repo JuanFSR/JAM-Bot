@@ -94,11 +94,43 @@ nlu:
     - muito ruim
     - muito triste
 
-- intent: bot_challenge
-  examples: |
-    - você é um bot?
-    - você é humano?
-    - você é uma pessoa?
-    - estou conversando com um bot?
-    - estou conversando com um humano?
-    - estou conversando com uma pessoa?
+  - intent: bot_challenge
+    examples: |
+      - você é um bot?
+      - você é humano?
+      - você é uma pessoa?
+      - eu estou falando com um bot?
+      - eu estou falando com um ser humano?
+      - eu estou falando com uma pessoa?
+
+  - intent: duvida
+    examples: |
+      - quero saber como funciona
+      - como funciona
+      - quem é você
+      - o que você é
+      - como vendo
+      - como compro
+      - como vender
+      - como comprar
+
+  - intent: vender
+    examples: |
+      - quero vender um celular
+      - colocar produto a venda
+      - vendo um celular
+      - vendo celulares
+      - como que vendo
+      - venda celular
+      - quero vender
+      - vender
+      - venda
+
+  - intent: compra
+    examples: |
+      - quero comprar
+      - quero comprar um celular
+      - desejo comprar um celular
+      - desejo comprar 
+      - comprar
+      - compra
