@@ -126,10 +126,12 @@ nlu:
     - vender
     - venda
 
-- intent: venda_produto
+- intent: produto
   examples: |
     - gostaria de vender um celular
     - eu quero vender um iphone
+    - quero comprar um celular
+    - comprar um iphone
     - dois celulares
     - iphone 11
     - iphone 8
@@ -141,7 +143,7 @@ nlu:
     - eu quero vender 1
     - 1 quantidade
     - apenas 2
-      1 item
+    -  1 item
     - so 1
     - um
     - 2
@@ -161,6 +163,8 @@ nlu:
     - novíssimo
     - tá top
     - usado
+    - USADO
+    - NOVO
     - novo
 
 - intent: venda_condicoes
@@ -208,55 +212,58 @@ nlu:
     - excelente
     - troquei a pouco tempo
 
-- intent: venda_modelo
-  examples: |
-    - o modelo do meu produto é: 8 pro
-    - o modelo eu nao sei
-    - iphone 8 pro
-    - 11 pro plus
-    - iphone 8
-    - 11 pro
-    - 8 s
+# - intent: venda_modelo
+#   examples: |
+#     - o modelo do meu produto é: 8 pro
+#     - o modelo eu nao sei
+#     - iphone 8 pro
+#     - 11 pro plus
+#     - iphone 8
+#     - 11 pro
+#     - 8 s
 
-- intent: venda_cor
-  examples: |
-    - o meu iphone é da cor cinza
-    - cinza espacial
-    - é da cor azul
-    - vermelho
-    - marrom
-    - branco
-    - verde
-    - preto
-    - green
-    - black
-    - rosa
-    - pink
+# tem um jeito mais eficiente de fazer
+# - intent: venda_cor
+#   examples: |
+#     - o meu iphone é da cor cinza
+#     - cinza espacial
+#     - é da cor azul
+#     - vermelho
+#     - marrom
+#     - branco
+#     - verde
+#     - preto
+#     - green
+#     - black
+#     - rosa
+#     - pink
 
-- intent: venda_memoria
-  examples: |
-    - o meu iphone possui 64GB de armanezamento
-    - apenas 64
-    - 1024GB
-    - 64 GB
-    - 32GB
-    - 1024
-    - 32
-    - 1T
+# - intent: venda_memoria
+#   examples: |
+#     - o meu iphone possui 64GB de armanezamento
+#     - apenas 64
+#     - 1024GB
+#     - 64 GB
+#     - 32GB
+#     - 1024
+#     - 32
+#     - 1T
+#     - ir adicionando mais intents com o tempo (ele nao precisa perguntar de tudo) 
+#     - 
 
-- intent: venda_ram
-  examples: |
-    - o meu iphone possui 4GB de RAM
-    - ele possui 4GB de RAM
-    - 4 GB
-    - 2 GB
-    - 8 GB
-    - 2GB
-    - 4GB
-    - 8GB
-    - 2
-    - 4
-    - 6
+# - intent: venda_ram
+#   examples: |
+#     - o meu iphone possui 4GB de RAM
+#     - ele possui 4GB de RAM
+#     - 4 GB
+#     - 2 GB
+#     - 8 GB
+#     - 2GB
+#     - 4GB
+#     - 8GB
+#     - 2
+#     - 4
+#     - 6
 
 - intent: venda_valor
   examples: |
@@ -303,3 +310,53 @@ nlu:
     - desejo comprar 
     - comprar
     - compra
+
+- intent: preferencia
+  examples: |
+    - custo-beneficio
+    - custo beneficio
+    - quero preferencia de custo beneficio
+    - o custo beneficio
+    - estado do produto
+    - me interesso no estado do produto
+    - preço baixo
+    - eu busco preço baixo
+    - localizacao
+    - itens perto de mim
+    - produtos proximos
+    - o mais barato
+    - o melhor para mim
+
+- intent: selecionar_produto
+  examples: |
+    - quero o produto 1
+    - produto 2
+    - nao quero selecionar
+
+- intent: interesse_produto
+  examples: |
+    - me interesso no produto
+    - nao tenho interesse
+    - quero nao
+
+- intent: retorno_lista_produtos
+  examples: |
+    - quero voltar para a listagem
+    - voltar a lista de produtos
+    - lista produtos
+    - voltar pra lista
+
+- intent: cep
+  examples: |
+    - meu cep é: 87300200
+    - cep: 87300200
+    - 65047380
+    - 90550-031
+
+- intent: complemento
+  examples: |
+    - nao possui complemento
+    - ao lado do mercado da esquina
+    - casa branca
+    - arvores altas em cima
+    - 2 quadras de tal lugar
