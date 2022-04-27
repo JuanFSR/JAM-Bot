@@ -205,6 +205,7 @@ nlu:
       - bateria viciada
       - está em bom funcionamento sem marcas na tela
       - bom funcionamento
+      - está com a tela quebrada
 
   - intent: venda_tempo
     examples: |
@@ -241,6 +242,9 @@ nlu:
       - a bateria está média
       - a bateria está boa
       - a bateria está muito boa
+      - a bateria está ruim
+      - a bateria está mais ou menos
+      - não dura muito tempo
       - muito boa
       - média
       - boa
