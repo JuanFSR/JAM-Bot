@@ -1,362 +1,418 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - ei
-    - olá
-    - oi
-    - oie
-    - e aí
-    - eai
-    - bom dia
-    - boa tarde
-    - boa noite
-    - bomdia
-    - boatarde
-    - boanoite
-    - bora
-    - vamos lá
+  - intent: greet
+    examples: |
+      - hey
+      - ei
+      - olá
+      - oi
+      - oie
+      - e aí
+      - eai
+      - bom dia
+      - boa tarde
+      - boa noite
+      - bomdia
+      - boatarde
+      - boanoite
+      - bora
+      - vamos lá
 
-- intent: goodbye
-  examples: |
-    - até
-    - até mais
-    - até logo
-    - até depois
-    - tchau
-    - xau
-    - adeus
-    - sair
-    - fechar
-    - tenha um bom dia
-    - tenha uma boa tarde
-    - tenha uma boa noite
+  - intent: goodbye
+    examples: |
+      - até
+      - até mais
+      - até logo
+      - até depois
+      - tchau
+      - xau
+      - adeus
+      - sair
+      - fechar
+      - tenha um bom dia
+      - tenha uma boa tarde
+      - tenha uma boa noite
 
-- intent: affirm
-  examples: |
-    - sim
-    - s
-    - isso
-    - certo
-    - tá bom
-    - tá bem
-    - está bem
-    - ok
-    - okay
-    - ahamn
+  - intent: affirm
+    examples: |
+      - sim
+      - s
+      - isso
+      - certo
+      - tá bom
+      - tá bem
+      - está bem
+      - ok
+      - okay
+      - ahamn
 
-- intent: deny
-  examples: |
-    - não
-    - n
-    - ñ
-    - nao
-    - nunca
-    - jamais
-    - acho que não
+  - intent: deny
+    examples: |
+      - não
+      - n
+      - ñ
+      - nao
+      - nunca
+      - jamais
+      - acho que não
+      - não possui
 
-- intent: mood_great
-  examples: |
-    - perfeito
-    - bom
-    - ótimo
-    - muito bom
-    - maravilha
-    - maravilhoso
-    - me sentindo ótimo
-    - me sentindo bem
-    - me sentindo uma maravilha
-    - super empolgado
-    - estou feliz
-    - estou bem
-    - muito bem
-    - muitíssimo bem
+  - intent: mood_great
+    examples: |
+      - perfeito
+      - bom
+      - ótimo
+      - muito bom
+      - maravilha
+      - maravilhoso
+      - me sentindo ótimo
+      - me sentindo bem
+      - me sentindo uma maravilha
+      - super empolgado
+      - estou feliz
+      - estou bem
+      - muito bem
+      - muitíssimo bem
 
-- intent: mood_unhappy
-  examples: |
-    - meu dia foi péssimo
-    - estou péssimo
-    - não me sinto bem
-    - estou chateado
-    - super triste
-    - estou tão triste
-    - triste
-    - tão triste
-    - não estou feliz
-    - não estou satisfeito
-    - não tão bem
-    - não estou bem
-    - extremamente triste
-    - estou pra baixo
-    - estou deprê
-    - muito ruim
-    - muito triste
+  - intent: mood_unhappy
+    examples: |
+      - meu dia foi péssimo
+      - estou péssimo
+      - não me sinto bem
+      - estou chateado
+      - super triste
+      - estou tão triste
+      - triste
+      - tão triste
+      - não estou feliz
+      - não estou satisfeito
+      - não tão bem
+      - não estou bem
+      - extremamente triste
+      - estou pra baixo
+      - estou deprê
+      - muito ruim
+      - muito triste
 
-- intent: bot_challenge
-  examples: |
-    - você é um bot?
-    - você é humano?
-    - você é uma pessoa?
-    - eu estou falando com um bot?
-    - eu estou falando com um ser humano?
-    - eu estou falando com uma pessoa?
+  - intent: bot_challenge
+    examples: |
+      - você é um bot?
+      - você é humano?
+      - você é uma pessoa?
+      - eu estou falando com um bot?
+      - eu estou falando com um ser humano?
+      - eu estou falando com uma pessoa?
 
-- intent: duvida
-  examples: |
-    - quero saber como funciona
-    - como funciona
-    - quem é você
-    - o que você é
-    - como vendo
-    - como compro
-    - como vender
-    - como comprar
+  - intent: duvida
+    examples: |
+      - quero saber como funciona
+      - gostaria de saber como você funciona
+      - como funciona
+      - como você funciona?
+      - quem é você?
+      - o que você é?
+      - como vendo
+      - como compro
+      - como vender
+      - como comprar
 
-- intent: vender
-  examples: |
-    - quero vender um celular
-    - colocar produto a venda
-    - vendo um celular
-    - vendo celulares
-    - como que vendo
-    - venda celular
-    - quero vender
-    - vender
-    - venda
+  - intent: vender
+    examples: |
+      - quero vender um celular
+      - quero vender meu celular
+      - gostaria de vender meu celular
+      - colocar produto a venda
+      - vendo um celular
+      - vendo celulares
+      - como que vendo
+      - venda celular
+      - quero vender
+      - vender
+      - venda
 
-- intent: produto
-  examples: |
-    - gostaria de vender um celular
-    - eu quero vender um iphone
-    - quero comprar um celular
-    - comprar um iphone
-    - dois celulares
-    - iphone 11
-    - iphone 8
-    - celular
-    - iphone
+  - intent: produto
+    examples: |
+      - gostaria de vender um celular
+      - eu quero vender um iphone
+      - quero comprar um celular
+      - comprar um iphone
+      - dois celulares
+      - iphone 11
+      - iphone 8
+      - celular
+      - iphone
 
-- intent: venda_itens
-  examples: |
-    - eu quero vender 1
-    - 1 quantidade
-    - apenas 2
-    -  1 item
-    - so 1
-    - um
-    - 2
-    - 1
+  - intent: venda_itens
+    examples: |
+      - somente 1
+      - somente um
+      - somente um item
+      - somente dois itens
+      - 1 quantidade
+      - apenas 2
+      - dois itens
+      -  1 item
+      - so 1
+      - um só
+      - um
+      - dois
+      - 2
+      - 1
 
-- intent: venda_estado
-  examples: |
-    - o produto se encontra no estado usado
-    - o produto se encontra no estado novo
-    - está novo em folha
-    - ta bastante usado
-    - ele ta meio usado
-    - nao ta bom nao
-    - usei muito
-    - usei pouco
-    - nunca usei
-    - novíssimo
-    - tá top
-    - usado
-    - USADO
-    - NOVO
-    - novo
+  - intent: venda_estado
+    examples: |
+      - o produto se encontra no estado usado
+      - o produto se encontra no estado novo
+      - está novo em folha
+      - ta bastante usado
+      - ele ta meio usado
+      - nao ta bom nao
+      - usei muito
+      - usei pouco
+      - nunca usei
+      - novíssimo
+      - tá top
+      - usado
+      - USADO
+      - NOVO
+      - novo
 
-- intent: venda_condicoes
-  examples: |
-    - a condição nao tá muito boa
-    - tá horrivel
-    - tá um pouco gastado so
-    - não esta com um bom funcionamento
-    - ta funcionando mais ou menos
-    - olha, ele liga
-    - a bateria ta ruim
-    - há algumas marcas de uso
-    - tem arranhao na camera e na pelicula
-    - bati na parede e amassou
-    - ta amassado
-    - tela trincada
-    - bateria estufada
-    - a tela nao ta ligando
-    - o carregador nao carrega
-    - ta sem bateria
-    - bateria viciou
+  - intent: venda_condicoes
+    examples: |
+      - a condição nao tá muito boa
+      - tá horrivel
+      - tá um pouco gastado so
+      - não esta com um bom funcionamento
+      - ta funcionando mais ou menos
+      - olha, ele liga
+      - a bateria ta ruim
+      - há algumas marcas de uso
+      - tem arranhao na camera e na pelicula
+      - bati na parede e amassou
+      - ta amassado
+      - tela trincada
+      - bateria estufada
+      - a tela nao ta ligando
+      - o carregador nao carrega
+      - ta sem bateria
+      - bateria viciou
+      - ele não funciona
+      - ele não liga
+      - não há marcas de uso porém ele não liga
+      - possui riscos na tela porém funcionando em perfeito estado
+      - está em bom funcionamento com poucos arranhões
+      - bateria viciada
+      - está em bom funcionamento sem marcas na tela
+      - bom funcionamento
 
-- intent: venda_tempo
-  examples: |
-    - 2 anos, 1 mes, 23 dias, 2 horas e 12 segundos
-    - usei ele por 1 dia
-    - foi muito tempo
-    - nao me lembro
-    - ate que pouco
-    - um pouquinho
-    - varios dias
-    - bastante
-    - 1 mes
-    - 100 mes
+  - intent: venda_tempo
+    examples: |
+      - 2 anos, 1 mes, 23 dias, 2 horas e 12 segundos
+      - usei ele por 1 dia
+      - foi muito tempo
+      - nao me lembro
+      - ate que pouco
+      - um pouquinho
+      - varios dias
+      - bastante
+      - 1 mes
+      - 100 mes
+      - mais ou menos 10 meses
+      - um ano
+      - uma semana
+      - 5 dias
+      - 4 anos
+      - 2 anos e 3 meses
+      - 3 anos
+      - 6 meses
 
-- intent: venda_bateria
-  examples: |
-    - bateria ta horrivel
-    - nem carrega mais
-    - viciada
-    - bateria ta otima
-    - 100% de saude
-    - ela ainda ta com 70%
-    - ruim
-    - excelente
-    - troquei a pouco tempo
+  - intent: venda_bateria
+    examples: |
+      - bateria ta horrivel
+      - nem carrega mais
+      - viciada
+      - bateria ta otima
+      - 100% de saude
+      - ela ainda ta com 70%
+      - ruim
+      - excelente
+      - troquei a pouco tempo
+      - a bateria está média
+      - a bateria está boa
+      - a bateria está muito boa
+      - muito boa
+      - média
+      - boa
 
-# - intent: venda_modelo
-#   examples: |
-#     - o modelo do meu produto é: 8 pro
-#     - o modelo eu nao sei
-#     - iphone 8 pro
-#     - 11 pro plus
-#     - iphone 8
-#     - 11 pro
-#     - 8 s
+  # - intent: venda_modelo
+  #   examples: |
+  #     - o modelo do meu produto é: 8 pro
+  #     - o modelo eu nao sei
+  #     - iphone 8 pro
+  #     - 11 pro plus
+  #     - iphone 8
+  #     - 11 pro
+  #     - 8 s
 
-# tem um jeito mais eficiente de fazer
-# - intent: venda_cor
-#   examples: |
-#     - o meu iphone é da cor cinza
-#     - cinza espacial
-#     - é da cor azul
-#     - vermelho
-#     - marrom
-#     - branco
-#     - verde
-#     - preto
-#     - green
-#     - black
-#     - rosa
-#     - pink
+  # tem um jeito mais eficiente de fazer
+  # - intent: venda_cor
+  #   examples: |
+  #     - o meu iphone é da cor cinza
+  #     - cinza espacial
+  #     - é da cor azul
+  #     - vermelho
+  #     - marrom
+  #     - branco
+  #     - verde
+  #     - preto
+  #     - green
+  #     - black
+  #     - rosa
+  #     - pink
 
-# - intent: venda_memoria
-#   examples: |
-#     - o meu iphone possui 64GB de armanezamento
-#     - apenas 64
-#     - 1024GB
-#     - 64 GB
-#     - 32GB
-#     - 1024
-#     - 32
-#     - 1T
-#     - ir adicionando mais intents com o tempo (ele nao precisa perguntar de tudo) 
-#     - 
+  # - intent: venda_memoria
+  #   examples: |
+  #     - o meu iphone possui 64GB de armanezamento
+  #     - apenas 64
+  #     - 1024GB
+  #     - 64 GB
+  #     - 32GB
+  #     - 1024
+  #     - 32
+  #     - 1T
+  #     - ir adicionando mais intents com o tempo (ele nao precisa perguntar de tudo)
+  #     -
 
-# - intent: venda_ram
-#   examples: |
-#     - o meu iphone possui 4GB de RAM
-#     - ele possui 4GB de RAM
-#     - 4 GB
-#     - 2 GB
-#     - 8 GB
-#     - 2GB
-#     - 4GB
-#     - 8GB
-#     - 2
-#     - 4
-#     - 6
+  # - intent: venda_ram
+  #   examples: |
+  #     - o meu iphone possui 4GB de RAM
+  #     - ele possui 4GB de RAM
+  #     - 4 GB
+  #     - 2 GB
+  #     - 8 GB
+  #     - 2GB
+  #     - 4GB
+  #     - 8GB
+  #     - 2
+  #     - 4
+  #     - 6
 
-- intent: venda_valor
-  examples: |
-    - quero vender por 2 reais
-    - por 160 reais
-    - 1500 reais
-    - R$ 2,00
-    - R$ 2.00
-    - R$ 2,15
-    - R$ 2.15
-    - 2,00
-    - 2.00
-    - 2345
-    - 2
+  - intent: venda_valor
+    examples: |
+      - quero vender por 2 reais
+      - por 160 reais
+      - 1500 reais
+      - R$ 2,00
+      - R$ 2.00
+      - R$ 2,15
+      - R$ 2.15
+      - 2,00
+      - 2.00
+      - 2345
+      - 2
+      - 2000
+      - R$ 1.000,00
+      - 13000.50
+      - 7300 reais
 
-- intent: venda_foto
-  examples: |
-    - foto
+  - intent: venda_foto
+    examples: |
+      - foto
 
-- intent: venda_descricao
-  examples: |
-    - meu produto é muito lindo, ele é cheiroso e novo
-    - ele possui carregador e esta vindo com fone
-    - por mais que esteja quebrado, ele ainda liga a lanterna
-    - nao quero colocar descricao
-    - descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique
+  - intent: venda_descricao
+    examples: |
+      - meu produto é muito lindo, ele é cheiroso e novo
+      - ele possui carregador e esta vindo com fone
+      - por mais que esteja quebrado, ele ainda liga a lanterna
+      - nao quero colocar descricao
+      - descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique
+      - iphone top de linha
+      - celular em otima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado
+      - não acompanha carregador
+      - vem com a caixa do aparelho
 
-- intent: venda_revisao
-  examples: |
-    - quero rever a informação sobre bateria
-    - esqueci de colocar o modelo correto
-    - ai meu deus, coloquei a cor errado
-    - eu sai feio na foto, quero mudar
-    - como muda a descricao
-    - adicionar revisao
-    - como que apaga
-    - rever
+  - intent: venda_revisao
+    examples: |
+      - quero rever a informação sobre bateria
+      - esqueci de colocar o modelo correto
+      - ai meu deus, coloquei a cor errado
+      - eu sai feio na foto, quero mudar
+      - como muda a descricao
+      - adicionar revisao
+      - como que apaga
+      - rever
 
-- intent: compra
-  examples: |
-    - quero comprar
-    - quero comprar um celular
-    - desejo comprar um celular
-    - desejo comprar 
-    - comprar
-    - compra
+  - intent: comprar
+    examples: |
+      - quero comprar um celular
+      - procurar um celular para comprar
+      - gostaria de comprar um celular
+      - eu gostaria de comprar um celular
+      - gostaria de realizar um compra
+      - quero comprar um celular
+      - desejo comprar um celular
+      - comprar um celular
+      - comprar celulares
+      - desejo comprar
+      - quero comprar
+      - comprar
+      - compra
 
-- intent: preferencia
-  examples: |
-    - custo-beneficio
-    - custo beneficio
-    - quero preferencia de custo beneficio
-    - o custo beneficio
-    - estado do produto
-    - me interesso no estado do produto
-    - preço baixo
-    - eu busco preço baixo
-    - localizacao
-    - itens perto de mim
-    - produtos proximos
-    - o mais barato
-    - o melhor para mim
+  - intent: preferencia
+    examples: |
+      - custo-beneficio
+      - custo beneficio
+      - quero preferencia de custo beneficio
+      - o custo beneficio
+      - estado do produto
+      - me interesso no estado do produto
+      - preço baixo
+      - eu busco preço baixo
+      - localizacao
+      - itens perto de mim
+      - produtos proximos
+      - o mais barato
+      - o melhor para mim
 
-- intent: selecionar_produto
-  examples: |
-    - quero o produto 1
-    - produto 2
-    - nao quero selecionar
+  - intent: selecionar_produto
+    examples: |
+      - quero o produto 1
+      - produto 2
+      - nao quero selecionar
+      - 1
+      - quero selecionar o produto um
+      - produto um
 
-- intent: interesse_produto
-  examples: |
-    - me interesso no produto
-    - nao tenho interesse
-    - quero nao
+  - intent: interesse_produto
+    examples: |
+      - me interesso no produto
+      - nao tenho interesse
+      - quero nao
+      - não me interesso
+      - não quero
+      - sem interesse
 
-- intent: retorno_lista_produtos
-  examples: |
-    - quero voltar para a listagem
-    - voltar a lista de produtos
-    - lista produtos
-    - voltar pra lista
+  - intent: retorno_lista_produtos
+    examples: |
+      - quero voltar para a listagem
+      - voltar a lista de produtos
+      - lista produtos
+      - voltar pra lista
+      - quero ver mais produtos
+      - ver lista de produtos
 
-- intent: cep
-  examples: |
-    - meu cep é: 87300200
-    - cep: 87300200
-    - 65047380
-    - 90550-031
+  - intent: cep
+    examples: |
+      - meu cep é: 87300200
+      - cep: 87300200
+      - 65047380
+      - 90550-031
 
-- intent: complemento
-  examples: |
-    - nao possui complemento
-    - ao lado do mercado da esquina
-    - casa branca
-    - arvores altas em cima
-    - 2 quadras de tal lugar
+  - intent: complemento
+    examples: |
+      - nao possui complemento
+      - ao lado do mercado da esquina
+      - casa branca
+      - arvores altas em cima
+      - 2 quadras de tal lugar
