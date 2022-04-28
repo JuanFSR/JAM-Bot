@@ -58,43 +58,6 @@ nlu:
       - acho que não
       - não possui
 
-  - intent: mood_great
-    examples: |
-      - perfeito
-      - bom
-      - ótimo
-      - muito bom
-      - maravilha
-      - maravilhoso
-      - me sentindo ótimo
-      - me sentindo bem
-      - me sentindo uma maravilha
-      - super empolgado
-      - estou feliz
-      - estou bem
-      - muito bem
-      - muitíssimo bem
-
-  - intent: mood_unhappy
-    examples: |
-      - meu dia foi péssimo
-      - estou péssimo
-      - não me sinto bem
-      - estou chateado
-      - super triste
-      - estou tão triste
-      - triste
-      - tão triste
-      - não estou feliz
-      - não estou satisfeito
-      - não tão bem
-      - não estou bem
-      - extremamente triste
-      - estou pra baixo
-      - estou deprê
-      - muito ruim
-      - muito triste
-
   - intent: bot_challenge
     examples: |
       - você é um bot?
@@ -112,9 +75,10 @@ nlu:
       - como você funciona?
       - quem é você?
       - o que você é?
+# utilizar retrieval intents para dúvidas compra/venda
       - como vendo
-      - como compro
       - como vender
+      - como compro
       - como comprar
 
   - intent: vender
