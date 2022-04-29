@@ -67,6 +67,7 @@ nlu:
       - eu estou falando com um ser humano?
       - eu estou falando com uma pessoa?
 
+# utilizar retrieval intents para dúvidas compra/venda
   - intent: duvida
     examples: |
       - quero saber como funciona
@@ -75,7 +76,6 @@ nlu:
       - como você funciona?
       - quem é você?
       - o que você é?
-# utilizar retrieval intents para dúvidas compra/venda
       - como vendo
       - como vender
       - como compro
@@ -327,80 +327,133 @@ nlu:
       - comprar
       - compra
 
-  - intent: preferencia
+  - lookup: preferencia
+    examples: |
+      - custo-beneficio
+      - estado
+      - preço
+      - localização
+  
+  - synonym: custo-beneficio
     examples: |
       - custo-beneficio
       - custo beneficio
-      - quero preferencia de custo beneficio
-      - o custo beneficio
-      - estado do produto
-      - me interesso no estado do produto
+      - custo-benefício
+      - custo benefício
+
+  - synonym: estado
+    examples: |
+      - novo
+      - usado
+
+  - synonym: preço
+    examples: |
+      - preco baixo
+      - preço
       - preço baixo
-      - eu busco preço baixo
-      - localizacao
-      - itens perto de mim
-      - produtos proximos
+      - menor preço
+      - mais barato
+      - barato
+      - mais caro
       - o mais barato
-      - o melhor para mim
+      - caro
+
+  - synonym: localização
+    examples: |
+      - perto
+      - localização
+      - localizacao
+      - mais proximo
+      - mais perto
+      - mais próximo
+
+  - intent: preferencia_produto
+    examples: |
+      - eu quero apenas o [custo beneficio] (preferencia)
+      - eu quero apenas [novo] (preferencia)
+      - eu quero apenas o [preço] (preferencia)
+      - eu quero apenas a [localização] (preferencia)
+      - quero [preço] baixo (preferencia)
+      - eu quero o [preço] mais baixo e a [localizacao] (preferencia)
 
   - intent: selecionar_produto
     examples: |
-      - quero o produto 1
-      - produto 2
-      - nao quero selecionar
-      - 1
-      - quero selecionar o produto um
-      - produto um
+      - quero o produto [1] (escolher_produto)
+      - produto [2] (escolher_produto)
+      - [nao] quero selecionar (escolher_produto)
+      - [1] (escolher_produto)
+      - quero selecionar o produto [um] (escolher_produto)
+      - produto [um] (escolher_produto)
 
   - intent: interesse_produto
     examples: |
-      - me interesso no produto
-      - nao tenho interesse
-      - quero nao
-      - não me interesso
-      - não quero
-      - sem interesse
+      - [me interesso no produto] (interesse)
+      - [interessante o produto] (interesse)
+      - [gostei do produto] (interesse)
+      - [me encantei no produto] (interesse)
+      - [show de bola, gostei daquele] (interesse)
+      - [nao tenho interesse] (interesse)
+      - [quero nao] (interesse)
+      - [não me interesso] (interesse)
+      - [não quero] (interesse)
+      - [sem interesse] (interesse)
 
   - intent: retorno_lista_produtos
     examples: |
-      - quero voltar para a listagem
-      - voltar a lista de produtos
-      - lista produtos
-      - voltar pra lista
-      - quero ver mais produtos
-      - ver lista de produtos
+      - [quero voltar para a listagem] (volta_listagem)
+      - [voltar a lista de produtos] (volta_listagem)
+      - [lista produtos] (volta_listagem)
+      - [voltar pra lista] (volta_listagem)
+      - [quero ver mais produtos] (volta_listagem)
+      - [ver lista de produtos] (volta_listagem)
 
   - intent: cep
     examples: |
-      - meu cep é: 87300200
-      - cep: 87300200
-      - 65047380
-      - 90550-031
+      - meu cep é: [87300200] (cep)
+      - meu cep é: [87.300-200] (cep)
+      - meu cep é: [87.300200] (cep)
+      - meu cep é: [87300-200] (cep)
+      - cep: [87300200] (cep)
+      - cep: [87.300-200] (cep)
+      - cep: [87.300200] (cep)
+      - cep: [87300-200] (cep)
+      - [65047380] (cep)
+      - [90550-031] (cep)
+      - [90.550-031] (cep)
+      - [90.550031] (cep)
 
   - intent: numero_casa
     examples: |
-      - o número é 123
-      - 123
-      - casa 123
-      - não possui número
-      - não tem
-      - sem número
+      - o número é [123] (numero)
+      - [123] (numero)
+      - casa [123] (numero)
+      - [não possui número] (numero)
+      - [não possui numero] (numero)
+      - [não tem] (numero)
+      - [n tem] (numero)
+      - [nao tem] (numero)
+      - [tem não] (numero)
+      - [tem n] (numero)
+      - [tem não] (numero)
+      - [sem número] (numero)
 
   - intent: complemento
     examples: |
-      - nao possui complemento
-      - ao lado do mercado da esquina
-      - casa branca
-      - arvores altas em cima
-      - 2 quadras de tal lugar
-      - apartamento 102
-      - apt 102
-      - ap 102
-      - apê 102
-      - kitnet 05
+      - [nao possui complemento] (complemento)
+      - [ao lado do mercado da esquina] (complemento)
+      - [casa branca] (complemento)
+      - [arvores altas em cima] (complemento)
+      - [2 quadras de tal lugar] (complemento)
+      - [apartamento 102] (complemento)
+      - [apt 102] (complemento)
+      - [ap 102] (complemento)
+      - [apê 102] (complemento)
+      - [kitnet 05] (complemento)
 
   - intent: nome_usuario
     examples: |
-      - me chamo maria clara
-      - maria clara
-      - meu nome é maria clara
+      - me chamo [maria clara] (nome)
+      - [maria clara] (nome)
+      - meu nome é [maria clara] (nome)
+      - [maria clara] é meu nome (nome)
+      - gosto que me chamem de [maria clara] (nome)
