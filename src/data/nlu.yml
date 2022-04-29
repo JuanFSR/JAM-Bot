@@ -58,6 +58,14 @@ nlu:
       - jamais
       - acho que não
       - não possui
+      - não tem
+      - sem complemento
+      - não tem complemento
+      - não possui complemento
+      - não possui número
+      - não tem número
+      - não tem número de casa
+      - sem número
 
   - intent: bot_challenge
     examples: |
@@ -68,6 +76,7 @@ nlu:
       - eu estou falando com um ser humano?
       - eu estou falando com uma pessoa?
 
+# utilizar retrieval intents para dúvidas compra/venda
   - intent: duvida
     examples: |
       - quero saber como funciona
@@ -76,7 +85,6 @@ nlu:
       - como você funciona?
       - quem é você?
       - o que você é?
-# utilizar retrieval intents para dúvidas compra/venda
       - como vendo
       - como vender
       - como compro
@@ -273,18 +281,18 @@ nlu:
       - quero vender por 2 reais
       - por 160 reais
       - 1500 reais
-      - R$ 2,00
-      - R$ 2.00
-      - R$ 2,15
-      - R$ 2.15
-      - 2,00
-      - 2.00
-      - 2345
-      - 2
-      - 2000
-      - R$ 1.000,00
-      - 13000.50
       - 7300 reais
+      - R$ 3,00
+      - R$ 4000.00
+      - R$ 278,15
+      - R$ 1.000,00
+      - R$ 75.50
+      - 24,00
+      - 702.80
+      - 2345
+      - 458
+      - 7800
+      - 13000.50
 
   - intent: venda_foto
     examples: |
@@ -349,62 +357,88 @@ nlu:
   - intent: selecionar_produto
     examples: |
       - quero o produto 1
+      - gostei do produto 1
       - produto 2
-      - nao quero selecionar
       - 1
       - quero selecionar o produto um
       - produto um
+      - nao quero selecionar
 
   - intent: interesse_produto
     examples: |
       - me interesso no produto
+      - me interessei no produto
+      - gostei do produto
+      - não gostei do produto
       - nao tenho interesse
       - quero nao
-      - não me interesso
       - não quero
+      - não me interesso
+      - não me interessa
       - sem interesse
 
   - intent: retorno_lista_produtos
     examples: |
       - quero voltar para a listagem
+      - voltar para a listagem
       - voltar a lista de produtos
       - lista produtos
       - voltar pra lista
       - quero ver mais produtos
       - ver lista de produtos
+      - lista de produtos
+      - voltar a lista
+      - voltar
 
 # CADASTRO
   - intent: cep
     examples: |
-      - meu cep é: 87300200
-      - cep: 87300200
+      - meu cep é: 87300-200
+      - meu cep é 87562130
+      - cep: 8245670
       - 65047380
       - 90550-031
 
   - intent: numero_casa
     examples: |
-      - o número é 123
-      - 123
-      - casa 123
-      - não possui número
-      - não tem
-      - sem número
+      - o número é [123] (numero_casa)
+      - o número da casa é [7850] (numero_casa)
+      - [325] (numero_casa)
+      - casa [45] (numero_casa)
+ 
 
   - intent: complemento
     examples: |
-      - nao possui complemento
-      - ao lado do mercado da esquina
-      - casa branca
-      - arvores altas em cima
-      - 2 quadras de tal lugar
       - apartamento 102
-      - apt 102
-      - ap 102
-      - apê 102
+      - apt 320
+      - ap 605
+      - apê 114
       - kitnet 05
+      - kitchenette 12
+      - quitinete 23
+      - fundos
+    # - ao lado do mercado da esquina
+    # - casa branca
+    # - arvores altas em cima
+    # - 2 quadras de tal lugar
 
   - intent: nome_usuario
     examples: |
-      - me chamo maria clara
-      - maria clara
-      - meu nome é maria clara
+      - me chamo [maria clara] (usuario)
+      - me chamo [ana júlia] (usuario)
+      - me chamo [joão] (usuario)
+      - me chamo [josé ricardo da silva] (usuario)
+      - me chamo [juliana claudia santos] (usuario)
+      - me chamo [luana] (usuario)
+      - meu nome é [gabriel] (usuario)
+      - meu nome é [renato fitzgerald] (usuario)
+      - meu nome é [linna duarte] (usuario)
+      - meu nome é [barbara quinn] (usuario)
+      - meu nome é [liana] (usuario)
+      - é [larissa] (usuario)
+      - é [emilia de ferreira] (usuario)
+      - é [matheus rodriguez] (usuario)
+      - é [diego] (usuario)
+      - é [miriam] (usuario)
+      - [maria clara] (usuario)
+
