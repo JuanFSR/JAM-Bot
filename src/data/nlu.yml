@@ -1,6 +1,7 @@
 version: "3.1"
 
 nlu:
+# GERAL
   - intent: greet
     examples: |
       - hey
@@ -81,6 +82,7 @@ nlu:
       - como compro
       - como comprar
 
+# VENDA
   - intent: vender
     examples: |
       - quero vender um celular
@@ -311,6 +313,7 @@ nlu:
       - como que apaga
       - rever
 
+# COMPRA
   - intent: comprar
     examples: |
       - quero comprar um celular
@@ -407,6 +410,7 @@ nlu:
       - [quero ver mais produtos] (volta_listagem)
       - [ver lista de produtos] (volta_listagem)
 
+# CADASTRO
   - intent: cep
     examples: |
       - meu cep é: [87300200] (cep)
