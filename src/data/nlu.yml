@@ -330,46 +330,6 @@ nlu:
       - comprar
       - compra
 
-  - lookup: preferencia
-    examples: |
-      - custo-beneficio
-      - estado
-      - preço
-      - localização
-  
-  - synonym: custo-beneficio
-    examples: |
-      - custo-beneficio
-      - custo beneficio
-      - custo-benefício
-      - custo benefício
-
-  - synonym: estado
-    examples: |
-      - novo
-      - usado
-
-  - synonym: preço
-    examples: |
-      - preco baixo
-      - preço
-      - preço baixo
-      - menor preço
-      - mais barato
-      - barato
-      - mais caro
-      - o mais barato
-      - caro
-
-  - synonym: localização
-    examples: |
-      - perto
-      - localização
-      - localizacao
-      - mais proximo
-      - mais perto
-      - mais próximo
-
   - intent: preferencia_produto
     examples: |
       - eu quero apenas o [custo beneficio] (preferencia)
@@ -461,3 +421,43 @@ nlu:
       - meu nome é [maria clara] (nome)
       - [maria clara] é meu nome (nome)
       - gosto que me chamem de [maria clara] (nome)
+
+  - lookup: preferencia
+    examples: |
+      - custo-beneficio
+      - estado
+      - preço
+      - localização
+  
+  - synonym: custo-beneficio
+    examples: |
+      - custo-beneficio
+      - custo beneficio
+      - custo-benefício
+      - custo benefício
+
+  - synonym: estado
+    examples: |
+      - novo
+      - usado
+
+  - synonym: preço
+    examples: |
+      - preco baixo
+      - preço
+      - preço baixo
+      - menor preço
+      - mais barato
+      - barato
+      - mais caro
+      - o mais barato
+      - caro
+
+  - synonym: localização
+    examples: |
+      - perto
+      - localização
+      - localizacao
+      - mais proximo
+      - mais perto
+      - mais próximo
