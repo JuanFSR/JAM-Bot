@@ -71,149 +71,144 @@ nlu:
 # utilizar retrieval intents para dúvidas compra/venda
   - intent: duvida
     examples: |
-      - quero saber como funciona
-      - gostaria de saber como você funciona
-      - como funciona
-      - como você funciona?
-      - quem é você?
-      - o que você é?
-      - como vendo
-      - como vender
-      - como compro
-      - como comprar
+      - [quero saber como] (duvida) [funciona] (duvida_tipo)
+      - [gostaria de saber como] (duvida) [você funciona] (duvida_tipo)
+      - [como] (duvida) [funciona] (duvida_tipo)
+      - [como] (duvida) [você funciona?] (duvida_tipo)
+      - [quem] (duvida) [é você?] (duvida_tipo)
+      - [o que] (duvida) [você é?] (duvida_tipo)
+      - [como] (duvida) [vendo] (duvida_tipo)
+      - [como] (duvida) [vender] (duvida_tipo)
+      - [como] (duvida) [compro] (duvida_tipo)
+      - [como] (duvida) [comprar] (duvida_tipo)
 
 # VENDA
   - intent: vender
     examples: |
-      - quero vender um celular
-      - quero vender meu celular
-      - gostaria de vender meu celular
-      - colocar produto a venda
-      - vendo um celular
-      - vendo celulares
-      - como que vendo
-      - venda celular
-      - quero vender
-      - vender
-      - venda
+      - quero [vender] um celular (venda)
+      - quero [vender] meu celular (venda)
+      - gostaria de [vender] meu celular (venda)
+      - colocar produto [a venda] (venda)
+      - [vendo] um celular (venda)
+      - [vendo] celulares (venda)
+      - como que [vendo] (venda)
+      - [venda] celular (venda)
+      - quero [vender] (venda)
+      - [vender] (venda)
+      - [venda] (venda)
 
   - intent: produto
     examples: |
-      - gostaria de vender um celular
-      - eu quero vender um iphone
-      - quero comprar um celular
-      - comprar um iphone
-      - dois celulares
-      - iphone 11
-      - iphone 8
-      - celular
-      - iphone
+      - gostaria de vender um [celular] (produto)
+      - eu quero vender um [iphone] (produto)
+      - quero comprar um [celular] (produto)
+      - comprar um [iphone] (produto)
+      - dois [celulares] (produto)
+      - [iphone 11] (produto)
+      - [iphone 8] (produto)
+      - [celular] (produto)
+      - [iphone] (produto)
 
   - intent: venda_itens
     examples: |
-      - somente 1
-      - somente um
-      - somente um item
-      - somente dois itens
-      - 1 quantidade
-      - apenas 2
-      - dois itens
-      -  1 item
-      - so 1
-      - um só
-      - um
-      - dois
-      - 2
-      - 1
+      - somente [1] (itens)
+      - somente [um] (itens)
+      - somente [um] item (itens)
+      - somente [dois] itens (itens)
+      - [1] quantidade (itens)
+      - apenas [2] (itens)
+      - [dois] itens (itens)
+      -  [1] item (itens)
+      - so [1] (itens)
+      - [um] só (itens)
+      - [um] (itens)
+      - [dois] (itens)
+      - [2] (itens)
+      - [1] (itens)
 
   - intent: venda_estado
     examples: |
-      - o produto se encontra no estado usado
-      - o produto se encontra no estado novo
-      - está novo em folha
-      - ta bastante usado
-      - ele ta meio usado
-      - nao ta bom nao
-      - usei muito
-      - usei pouco
-      - nunca usei
-      - novíssimo
-      - tá top
-      - usado
-      - USADO
-      - NOVO
-      - novo
+      - o produto se encontra no estado [estado_novo] (estado)
+      - o produto se encontra no estado [estado_ruim] (estado)
+      - está [estado_novo] (estado)
+      - está [estado_ruim] (estado)
+      - ta bastante [estado_novo] (estado)
+      - ta bastante [estado_ruim] (estado)
+      - ele ta meio [estado_novo] (estado)
+      - ele ta meio [estado_ruim] (estado)
+      - [estado_novo]
+      - [estado_ruim]
 
   - intent: venda_condicoes
     examples: |
-      - a condição nao tá muito boa
-      - tá horrivel
-      - tá um pouco gastado so
-      - não esta com um bom funcionamento
-      - ta funcionando mais ou menos
-      - olha, ele liga
-      - a bateria ta ruim
-      - há algumas marcas de uso
-      - tem arranhao na camera e na pelicula
-      - bati na parede e amassou
-      - ta amassado
-      - tela trincada
-      - bateria estufada
-      - a tela nao ta ligando
-      - o carregador nao carrega
-      - ta sem bateria
-      - bateria viciou
-      - ele não funciona
-      - ele não liga
-      - não há marcas de uso porém ele não liga
-      - possui riscos na tela porém funcionando em perfeito estado
-      - está em bom funcionamento com poucos arranhões
-      - bateria viciada
-      - está em bom funcionamento sem marcas na tela
-      - bom funcionamento
-      - está com a tela quebrada
+      - a condição [nao tá muito boa] (condicoes)
+      - [tá horrivel] (condicoes)
+      - [tá um pouco gastado so] (condicoes)
+      - [não esta com um bom funcionamento] (condicoes)
+      - [ta funcionando mais ou menos] (condicoes)
+      - [olha, ele liga] (condicoes)
+      - [a bateria ta ruim] (condicoes)
+      - [há algumas marcas de uso] (condicoes)
+      - [tem arranhao na camera e na pelicula] (condicoes)
+      - [bati na parede e amassou] (condicoes)
+      - [ta amassado] (condicoes)
+      - [tela trincada] (condicoes)
+      - [bateria estufada] (condicoes)
+      - [a tela nao ta ligando] (condicoes)
+      - [o carregador nao carrega] (condicoes)
+      - [ta sem bateria] (condicoes)
+      - [bateria viciou] (condicoes)
+      - [ele não funciona] (condicoes)
+      - [ele não liga] (condicoes)
+      - [não há marcas de uso porém ele não liga] (condicoes)
+      - [possui riscos na tela porém funcionando em perfeito estado] (condicoes)
+      - [está em bom funcionamento com poucos arranhões] (condicoes)
+      - [bateria viciada] (condicoes)
+      - [está em bom funcionamento sem marcas na tela] (condicoes)
+      - [bom funcionamento] (condicoes)
+      - [está com a tela quebrada] (condicoes)
 
   - intent: venda_tempo
     examples: |
-      - 2 anos, 1 mes, 23 dias, 2 horas e 12 segundos
-      - usei ele por 1 dia
-      - foi muito tempo
-      - nao me lembro
-      - ate que pouco
-      - um pouquinho
-      - varios dias
-      - bastante
-      - 1 mes
-      - 100 mes
-      - mais ou menos 10 meses
-      - um ano
-      - uma semana
-      - 5 dias
-      - 4 anos
-      - 2 anos e 3 meses
-      - 3 anos
-      - 6 meses
+      - [2 anos, 1 mes, 23 dias, 2 horas e 12 segundos] (tempo)
+      - [usei ele por 1 dia] (tempo)
+      - [foi muito tempo] (tempo)
+      - [nao me lembro] (tempo)
+      - [ate que pouco] (tempo)
+      - [um pouquinho] (tempo)
+      - [varios dias] (tempo)
+      - [bastante] (tempo)
+      - [1 mes] (tempo)
+      - [100 mes] (tempo)
+      - [mais ou menos 10 meses] (tempo)
+      - [um ano] (tempo)
+      - [uma semana] (tempo)
+      - [5 dias] (tempo)
+      - [4 anos] (tempo)
+      - [2 anos e 3 mese]s (tempo)
+      - [3 anos] (tempo)
+      - [6 meses] (tempo)
 
   - intent: venda_bateria
     examples: |
-      - bateria ta horrivel
-      - nem carrega mais
-      - viciada
-      - bateria ta otima
-      - 100% de saude
-      - ela ainda ta com 70%
-      - ruim
-      - excelente
-      - troquei a pouco tempo
-      - a bateria está média
-      - a bateria está boa
-      - a bateria está muito boa
-      - a bateria está ruim
-      - a bateria está mais ou menos
-      - não dura muito tempo
-      - muito boa
-      - média
-      - boa
+      - bateria [ta horrivel] (bateria)
+      - [nem carrega mais] (bateria)
+      - [viciada] (bateria)
+      - bateria [ta otima] (bateria)
+      - [100% de saude] (bateria)
+      - [ela ainda ta com 70%] (bateria)
+      - [ruim] (bateria)
+      - [excelente] (bateria)
+      - [troquei a pouco tempo] (bateria)
+      - a bateria [está média] (bateria)
+      - a bateria [está boa] (bateria)
+      - a bateria [está muito boa] (bateria)
+      - a bateria [está ruim] (bateria)
+      - a bateria [está mais ou menos] (bateria)
+      - [não dura muito tempo] (bateria)
+      - [muito boa] (bateria)
+      - [média] (bateria)
+      - [boa] (bateria)
 
   # - intent: venda_modelo
   #   examples: |
@@ -270,65 +265,65 @@ nlu:
 
   - intent: venda_valor
     examples: |
-      - quero vender por 2 reais
-      - por 160 reais
-      - 1500 reais
-      - R$ 2,00
-      - R$ 2.00
-      - R$ 2,15
-      - R$ 2.15
-      - 2,00
-      - 2.00
-      - 2345
-      - 2
-      - 2000
-      - R$ 1.000,00
-      - 13000.50
-      - 7300 reais
+      - quero vender por [2 reais] (valor)
+      - por [160 reais] (valor)
+      - [1500 reais] (valor)
+      - [R$ 2,00] (valor)
+      - [R$ 2.00] (valor)
+      - [R$ 2,15] (valor)
+      - [R$ 2.15] (valor)
+      - [2,00] (valor)
+      - [2.00] (valor)
+      - [2345] (valor)
+      - [2] (valor)
+      - [2000] (valor)
+      - [R$ 1.000,00] (valor)
+      - [13000.50] (valor)
+      - [7300 reais] (valor)
 
   - intent: venda_foto
     examples: |
-      - foto
+      - [foto] (foto)
 
   - intent: venda_descricao
     examples: |
-      - meu produto é muito lindo, ele é cheiroso e novo
-      - ele possui carregador e esta vindo com fone
-      - por mais que esteja quebrado, ele ainda liga a lanterna
-      - nao quero colocar descricao
-      - descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique
-      - iphone top de linha
-      - celular em otima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado
-      - não acompanha carregador
-      - vem com a caixa do aparelho
+      - [meu produto é muito lindo, ele é cheiroso e novo] (descricao)
+      - [ele possui carregador e esta vindo com fone] (descricao)
+      - [por mais que esteja quebrado, ele ainda liga a lanterna] (descricao)
+      - [nao quero colocar descricao] (descricao)
+      - [descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique] (descricao)
+      - [iphone top de linha] (descricao)
+      - [celular em otima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado] (descricao)
+      - [não acompanha carregador] (descricao)
+      - [vem com a caixa do aparelho] (descricao)
 
   - intent: venda_revisao
     examples: |
-      - quero rever a informação sobre bateria
-      - esqueci de colocar o modelo correto
-      - ai meu deus, coloquei a cor errado
-      - eu sai feio na foto, quero mudar
-      - como muda a descricao
-      - adicionar revisao
-      - como que apaga
-      - rever
+      - quero [rever a informação] (revisao) sobre [bateria] (revisao_tipo)
+      - [esqueci de colocar] (revisao) o [modelo] (revisao_tipo) correto
+      - ai meu deus, [coloquei a cor errado] (revisao)
+      - eu sai feio [na foto] (revisao_tipo), [quero mudar] (revisao)
+      - como [muda] (revisao) [a descricao] (revisao_tipo)
+      - [adicionar revisao] (revisao)
+      - [como que apaga] (revisao)
+      - [rever] (revisao)
 
 # COMPRA
   - intent: comprar
     examples: |
-      - quero comprar um celular
-      - procurar um celular para comprar
-      - gostaria de comprar um celular
-      - eu gostaria de comprar um celular
-      - gostaria de realizar um compra
-      - quero comprar um celular
-      - desejo comprar um celular
-      - comprar um celular
-      - comprar celulares
-      - desejo comprar
-      - quero comprar
-      - comprar
-      - compra
+      - [quero comprar] um celular (compra)
+      - procurar um celular [para comprar] (compra)
+      - gostaria de [comprar um celular] (compra)
+      - eu gostaria de [comprar um celular] (compra)
+      - gostaria de [realizar um compra] (compra)
+      - quero [comprar um celular] (compra)
+      - desejo [comprar um celular] (compra)
+      - [comprar um celular] (compra)
+      - [comprar celulares] (compra)
+      - desejo [comprar] (compra)
+      - quero [comprar] (compra)
+      - [comprar] (compra)
+      - [compra] (compra)
 
   - intent: preferencia_produto
     examples: |
@@ -461,3 +456,29 @@ nlu:
       - mais proximo
       - mais perto
       - mais próximo
+
+  - synonym: estado_novo
+    examples: |
+      - ta muito bom
+      - ta bem novo
+      - ta bem bom
+      - novíssimo
+      - novissimo
+      - ta novo
+      - tá top
+      - NOVO
+      - novo
+      - foda
+      - top
+
+  - synonym: estado_ruim
+    examples: |
+      - foi bastante usado
+      - ta bastante usado
+      - ta meio usado
+      - usei bastante
+      - ta muito ruim
+      - ta meio ruim
+      - usei muito
+      - USADO
+      - usado
