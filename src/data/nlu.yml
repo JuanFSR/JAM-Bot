@@ -383,18 +383,18 @@ nlu:
 
   - intent: numero_casa
     examples: |
-      - o número é [123] (numero)
-      - [123] (numero)
-      - casa [123] (numero)
-      - [não possui número] (numero)
-      - [não possui numero] (numero)
-      - [não tem] (numero)
-      - [n tem] (numero)
-      - [nao tem] (numero)
-      - [tem não] (numero)
-      - [tem n] (numero)
-      - [tem não] (numero)
-      - [sem número] (numero)
+      - o número é 123 
+      - 123
+      - casa 123
+      - não possui número
+      - não possui numero 
+      - não tem 
+      - n tem
+      - nao tem
+      - tem não 
+      - tem n
+      - tem não 
+      - sem número
 
   - intent: complemento
     examples: |
