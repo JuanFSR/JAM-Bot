@@ -30,6 +30,11 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
+  - name: RegexEntityExtractor
+    case_sensitive: False
+    use_lookup_tables: False
+    use_regexes: True
+    "use_word_boundaries": True
   - name: "DucklingEntityExtractor"
     url: "http://localhost:8000"
     dimensions: ["number"]
