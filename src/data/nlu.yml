@@ -58,6 +58,14 @@ nlu:
       - jamais
       - acho que não
       - não possui
+      - não tem
+      - sem complemento
+      - não tem complemento
+      - não possui complemento
+      - não possui número
+      - não tem número
+      - não tem número de casa
+      - sem número
 
   - intent: bot_challenge
     examples: |
@@ -389,39 +397,46 @@ nlu:
 
   - intent: numero_casa
     examples: |
-      - o número é 123 
-      - 123
-      - casa 123
-      - não possui número
-      - não possui numero 
-      - não tem 
-      - n tem
-      - nao tem
-      - tem não 
-      - tem n
-      - tem não 
-      - sem número
-
+      - o número é [123] (numero_casa)
+      - o número da casa é [7850] (numero_casa)
+      - [325] (numero_casa)
+      - casa [45] (numero_casa)
+ 
   - intent: complemento
     examples: |
       - [nao possui complemento] (complemento)
-      - [ao lado do mercado da esquina] (complemento)
-      - [casa branca] (complemento)
-      - [arvores altas em cima] (complemento)
-      - [2 quadras de tal lugar] (complemento)
       - [apartamento 102] (complemento)
-      - [apt 102] (complemento)
-      - [ap 102] (complemento)
-      - [apê 102] (complemento)
+      - [apt 304] (complemento)
+      - [ap 408] (complemento)
+      - [apê 210] (complemento)
       - [kitnet 05] (complemento)
+      - [kitchenette 12] (complemento)
+      - [quitinete 23] (complemento)
+      - [fundos] (complemento)
+    # - [ao lado do mercado da esquina] (complemento)
+    # - [casa branca] (complemento)
+    # - [arvores altas em cima] (complemento)
+    # - [2 quadras de tal lugar] (complemento)
 
   - intent: nome_usuario
     examples: |
-      - me chamo [maria clara] (nome)
-      - [maria clara] (nome)
-      - meu nome é [maria clara] (nome)
-      - [maria clara] é meu nome (nome)
-      - gosto que me chamem de [maria clara] (nome)
+      - me chamo [maria clara] (usuario)
+      - me chamo [ana júlia] (usuario)
+      - me chamo [joão] (usuario)
+      - me chamo [josé ricardo da silva] (usuario)
+      - me chamo [juliana claudia santos] (usuario)
+      - me chamo [luana] (usuario)
+      - meu nome é [gabriel] (usuario)
+      - meu nome é [renato fitzgerald] (usuario)
+      - meu nome é [linna duarte] (usuario)
+      - meu nome é [barbara quinn] (usuario)
+      - meu nome é [liana] (usuario)
+      - é [larissa] (usuario)
+      - é [emilia de ferreira] (usuario)
+      - é [matheus rodriguez] (usuario)
+      - é [diego] (usuario)
+      - é [miriam] (usuario)
+      - [maria clara] (usuario)
 
   - lookup: preferencia
     examples: |
