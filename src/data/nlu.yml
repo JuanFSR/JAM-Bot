@@ -379,8 +379,8 @@ nlu:
       - \d{8}
       - [\d]{5}-[\d]{3}
       - [\d]{2}.[\d]{3}-[\d]{3}
-      - [\d]{2}.[\d]{5}
-  - intent: cep
+      - [\d]{2}.[\d]{6}
+  - intent: cep_usuario
     examples: |
       - meu cep é: [87300200] (cep)
       - meu cep é: [87.300-200] (cep)
