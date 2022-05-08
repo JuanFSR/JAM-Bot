@@ -2,7 +2,7 @@ version: "3.1"
 
 nlu:
 # GERAL
-  - intent: greet
+  - intent: cumprimento
     examples: |
       - hey
       - ei
@@ -20,7 +20,7 @@ nlu:
       - bora
       - vamos lá
 
-  - intent: goodbye
+  - intent: despedida
     examples: |
       - até
       - até mais
@@ -35,7 +35,7 @@ nlu:
       - tenha uma boa tarde
       - tenha uma boa noite
 
-  - intent: affirm
+  - intent: afirmacao
     examples: |
       - sim
       - s
@@ -48,7 +48,7 @@ nlu:
       - okay
       - ahamn
 
-  - intent: deny
+  - intent: negacao
     examples: |
       - não
       - n
@@ -67,7 +67,7 @@ nlu:
       - não tem número de casa
       - sem número
 
-  - intent: bot_challenge
+  - intent: desafia_bot
     examples: |
       - você é um bot?
       - você é humano?

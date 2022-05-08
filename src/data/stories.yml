@@ -2,6 +2,17 @@ version: "3.1"
 
 stories:
 
+- story: inicio do bot
+  steps:
+    - intent: cumprimento
+    - action: utter_cumprimento
+    # criar um fork para afirmação e negação
+    - intent: afirmacao
+    - action: utter_afirmacao
+    - intent: despedida
+    - action: utter_despedida
+    
+
 - story: happy path
   steps:
   - intent: greet

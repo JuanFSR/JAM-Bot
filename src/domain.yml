@@ -1,30 +1,55 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - bot_challenge
+  - cumprimento
+  - despedida
+  - afirmacao
+  - negacao
+  - desafia_bot
+
+# Verificar o que é mapping
+slots:
+  usuario:
+    type: text
+    influence_conversation: False
+    mappings:
+      - type: from_entity
+        entity: usuario
+  cep:
+    type: text
+    influence_conversation: False
+    mappings:
+      - type: from_entity
+        entity: cep
+  numero_casa:
+    type: number
+    mappings:
+      - type: from_entity
+        entity: numero_casa
+  complemento:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: complemento
 
 responses:
-  utter_greet:
-    - text: "Olá! Como você está?"
+  utter_cumprimento:
+    - text: "Olá, tudo bem? Muito prazer eu sou o JAM! Antes de tudo, gostaria de saber se você deseja saber um pouco mais sobre o meu funcionamento."
+    - text: "Olá {usuario}, bem vindo novamente! Antes de começarmos, o endereço ({cep}, número: {numero_casa}, {complemento}) se manteve?"
 
-  utter_cheer_up:
-    - text: "Aqui está algo para te alegrar:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_despedida:
+    - text: "Obrigado por utilizar o JAM. Até a próxima"
 
-  utter_did_that_help:
-    - text: "Isso te ajudou?"
+  utter_afirmacao:  
+    - text: "O JAM possibilita que você venda ou compre um produto, de forma rápida e fácil, fazendo um pequeno cadastro apenas uma vez."
 
-  utter_happy:
-    - text: "Ótimo, siga em frente!"
+  utter_cadastro:
+    - text: " Você gostaria de se cadastrar no JAM?"
 
-  utter_goodbye:
-    - text: "Tchau"
+  utter_negacao:
+    - text: " Você gostaria de se cadastrar no JAM?"
 
-  utter_iamabot:
+  utter_desafia_bot:
     - text: "Eu sou um bot feito com Rasa."
 
 session_config:

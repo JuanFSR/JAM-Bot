@@ -44,8 +44,6 @@ pipeline:
     timeout: 3
   - name: "SpacyEntityExtractor"
     dimensions: ["PERSON"]
-  - name: "SpacyTokenizer"
-  - name: "SpacyFeaturizer"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
