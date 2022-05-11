@@ -44,10 +44,10 @@ responses:
     - text: "O JAM possibilita que você venda ou compre um produto, de forma rápida e fácil, fazendo um pequeno cadastro apenas uma vez."
 
   utter_cadastro:
-    - text: " Você gostaria de se cadastrar no JAM?"
+    - text: "Você gostaria de se cadastrar no JAM?"
 
   utter_negacao:
-    - text: " Você gostaria de se cadastrar no JAM?"
+    - text: "Como posso ajudar, então?"
 
   utter_desafia_bot:
     - text: "Eu sou um bot feito com Rasa."

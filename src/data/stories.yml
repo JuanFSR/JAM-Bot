@@ -12,30 +12,13 @@ stories:
     - intent: despedida
     - action: utter_despedida
     
-
-- story: happy path
+- story: cadastro negado
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: cumprimento
+    - action: utter_cumprimento
+    - intent: cadastro
+    - action: utter_cadastro
+    - intent: negacao
+    - action: utter_negacao
+    - intent: despedida
+    - action: utter_despedida

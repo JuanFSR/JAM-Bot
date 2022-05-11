@@ -66,6 +66,7 @@ nlu:
       - não tem número
       - não tem número de casa
       - sem número
+      - não quero
 
   - intent: desafia_bot
     examples: |
