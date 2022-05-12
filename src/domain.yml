@@ -71,10 +71,13 @@ responses:
   - text: "{nome}, e o seu cep é {cep}."
 
   utter_conclui_cadastro:
-  - text: Prontinho, já salvei suas informações.
+  - text: 'Prontinho, já salvei suas informações.'
 
   utter_corrige_cadastro:
-  - text: Digite novamente os seus dados?
+  - text: 'Digite novamente os seus dados?'
+  
+  utter_bot_perdido:
+  - text: 'Desculpe, não entendi. Poderia repetir?'
 
 session_config:
   session_expiration_time: 60
@@ -88,3 +91,4 @@ actions:
 - utter_complemento_request
 - utter_confirma_dados_request
 - utter_conclui_cadastro
+- utter_bot_perdido

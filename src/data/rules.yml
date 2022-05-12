@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: desafia_bot
   - action: utter_desafia_bot
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_bot_perdido
