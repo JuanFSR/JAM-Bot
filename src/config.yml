@@ -38,10 +38,10 @@ pipeline:
     use_lookup_tables: False
     use_regexes: True
     "use_word_boundaries": True
-  - name: "DucklingEntityExtractor"
-    url: "http://localhost:8000"
-    dimensions: ["number"]
-    timeout: 3
+  # - name: "DucklingEntityExtractor"
+  #   url: "http://localhost:8000"
+  #   dimensions: ["number"]
+  #   timeout: 3
   - name: "SpacyEntityExtractor"
     dimensions: ["PERSON"]
 

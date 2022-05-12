@@ -9,16 +9,30 @@ stories:
     # criar um fork para afirmação e negação
     - intent: afirmacao
     - action: utter_afirmacao
-    - intent: despedida
     - action: utter_despedida
     
 - story: cadastro negado
   steps:
-    - intent: cumprimento
-    - action: utter_cumprimento
-    - intent: cadastro
-    - action: utter_cadastro
-    - intent: negacao
-    - action: utter_negacao
-    - intent: despedida
-    - action: utter_despedida
+  - intent: cumprimento
+  - action: utter_cumprimento
+  - intent: negacao
+  - action: utter_negacao
+  - action: utter_despedida
+
+- story: cadastro
+  steps: 
+  - intent: cumprimento
+  - action: utter_cadastro
+  - intent: afirmacao
+  - action: utter_nome_request
+  - intent: nome_usuario
+  - action: utter_cep_request
+  - intent: cep_usuario
+  - action: utter_complemento_request
+  - intent: complemento
+  - action: utter_confirma_dados_request
+  # Criar um fork
+  - intent: afirmacao
+  - action: utter_conclui_cadastro
+
+
