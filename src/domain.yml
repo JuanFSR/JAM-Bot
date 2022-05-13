@@ -8,6 +8,10 @@ intents:
 - nome_usuario
 - cep_usuario
 - complemento
+entities:
+- cep
+- usuario
+
 
 slots:
   usuario:
@@ -18,7 +22,7 @@ slots:
       entity: usuario
   cep:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: cep
@@ -92,3 +96,5 @@ actions:
 - utter_confirma_dados_request
 - utter_conclui_cadastro
 - utter_bot_perdido
+- action_find_cep
+- action_hello_world

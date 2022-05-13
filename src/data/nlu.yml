@@ -375,12 +375,6 @@ nlu:
       - [ver lista de produtos] (volta_listagem)
 
 # CADASTRO
-  - regex: cep
-    examples: |
-      - \d{8}
-      - [\d]{5}-[\d]{3}
-      - [\d]{2}.[\d]{3}-[\d]{3}
-      - [\d]{2}.[\d]{6}
   - intent: cep_usuario
     examples: |
       - meu cep é: [87300200] (cep)
@@ -395,6 +389,12 @@ nlu:
       - [90550-031] (cep)
       - [90.550-031] (cep)
       - [90.550031] (cep)
+  - regex: cep
+    examples: |
+      - \d{8}
+      - [\d]{5}-[\d]{3}
+      - [\d]{2}.[\d]{3}-[\d]{3}
+      - [\d]{2}.[\d]{6}
 
   - intent: numero_casa
     examples: |
