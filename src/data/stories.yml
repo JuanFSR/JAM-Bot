@@ -29,6 +29,7 @@ stories:
   - action: utter_cep_request
   - intent: cep_usuario
   - action: action_find_cep
+  - action: utter_complemento_request
   - intent: complemento
   - action: utter_confirma_dados_request
   # Criar um fork
