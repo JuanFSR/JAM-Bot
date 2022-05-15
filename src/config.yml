@@ -10,10 +10,15 @@ pipeline:
   # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
   # # If you'd like to customize it, uncomment and adjust the pipeline.
   # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-  # - name: "SpacyNLP"
-    # model: "pt_core_news_sm"
-    # case_sensitive: False
-  - name: WhitespaceTokenizer
+  - name: SpacyNLP
+    model: "pt_core_news_sm"
+  - name: SpacyEntityExtractor
+    dimensions: ["PERSON"]
+    case_sensitive: False
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+    pooling: mean
+  # - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: RegexEntityExtractor
     use_lookup_tables: True
@@ -42,8 +47,6 @@ pipeline:
   #   url: "http://localhost:8000"
   #   dimensions: ["number"]
   #   timeout: 3
-  # - name: "SpacyEntityExtractor"
-    # dimensions: ["PERSON"]
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

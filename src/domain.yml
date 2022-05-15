@@ -11,15 +11,10 @@ intents:
 entities:
 - cep
 - usuario
+- numero_casa
 
 
 slots:
-  usuario:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: usuario
   cep:
     type: text
     influence_conversation: true
@@ -29,8 +24,8 @@ slots:
   complemento:
     type: text
     mappings:
-    - type: from_entity
-      entity: complemento
+    - type: from_text
+      intent: complemento
   nome:
     type: text
     mappings:

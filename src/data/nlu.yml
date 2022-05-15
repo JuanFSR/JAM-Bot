@@ -150,74 +150,74 @@ nlu:
 
   - intent: venda_condicoes
     examples: |
-      - a condição [nao tá muito boa](condicoes)
-      - [tá horrivel](condicoes)
-      - [tá um pouco gastado so](condicoes)
-      - [não esta com um bom funcionamento](condicoes)
-      - [ta funcionando mais ou menos](condicoes)
-      - [olha, ele liga](condicoes)
-      - [a bateria ta ruim](condicoes)
-      - [há algumas marcas de uso](condicoes)
-      - [tem arranhao na camera e na pelicula](condicoes)
-      - [bati na parede e amassou](condicoes)
-      - [ta amassado](condicoes)
-      - [tela trincada](condicoes)
-      - [bateria estufada](condicoes)
-      - [a tela nao ta ligando](condicoes)
-      - [o carregador nao carrega](condicoes)
-      - [ta sem bateria](condicoes)
-      - [bateria viciou](condicoes)
-      - [ele não funciona](condicoes)
-      - [ele não liga](condicoes)
-      - [não há marcas de uso porém ele não liga](condicoes)
-      - [possui riscos na tela porém funcionando em perfeito estado](condicoes)
-      - [está em bom funcionamento com poucos arranhões](condicoes)
-      - [bateria viciada](condicoes)
-      - [está em bom funcionamento sem marcas na tela](condicoes)
-      - [bom funcionamento](condicoes)
-      - [está com a tela quebrada](condicoes)
+      - a condição nao tá muito boa
+      - tá horrivel
+      - tá um pouco gastado so
+      - não esta com um bom funcionamento
+      - ta funcionando mais ou menos
+      - olha, ele liga
+      - a bateria ta ruim
+      - há algumas marcas de uso
+      - tem arranhao na camera e na pelicula
+      - bati na parede e amassou
+      - ta amassado
+      - tela trincada
+      - bateria estufada
+      - a tela nao ta ligando
+      - o carregador nao carrega
+      - ta sem bateria
+      - bateria viciou
+      - ele não funciona
+      - ele não liga
+      - não há marcas de uso porém ele não liga
+      - possui riscos na tela porém funcionando em perfeito estado
+      - está em bom funcionamento com poucos arranhões
+      - bateria viciada
+      - está em bom funcionamento sem marcas na tela
+      - bom funcionamento
+      - está com a tela quebrada
 
   - intent: venda_tempo
     examples: |
-      - [2 anos, 1 mes, 23 dias, 2 horas e 12 segundos](tempo)
-      - usei ele por [1 dia](tempo)
-      - [foi muito tempo](tempo)
-      - [nao me lembro](tempo)
-      - [ate que pouco](tempo)
-      - [um pouquinho](tempo)
-      - [varios dias](tempo)
-      - [bastante](tempo)
-      - [1 mes](tempo)
-      - [100 mes](tempo)
-      - [mais ou menos 10 meses](tempo)
-      - [um ano](tempo)
-      - [uma semana](tempo)
-      - [5 dias](tempo)
-      - [4 anos](tempo)
-      - [2 anos e 3 meses](tempo)
-      - [3 anos](tempo)
-      - [6 meses](tempo)
+      - 2 anos, 1 mes, 23 dias, 2 horas e 12 segundos
+      - usei ele por 1 dia
+      - foi muito tempo
+      - nao me lembro
+      - ate que pouco
+      - um pouquinho
+      - varios dias
+      - bastante
+      - 1 mes
+      - 100 mes
+      - mais ou menos 10 meses
+      - um ano
+      - uma semana
+      - 5 dias
+      - 4 anos
+      - 2 anos e 3 meses
+      - 3 anos
+      - 6 meses
 
   - intent: venda_bateria
     examples: |
-      - bateria [ta horrivel](bateria)
-      - [nem carrega mais](bateria)
-      - [viciada](bateria)
-      - bateria [ta otima](bateria)
-      - [100% de saude](bateria)
-      - [ela ainda ta com 70%](bateria)
-      - [ruim](bateria)
-      - [excelente](bateria)
-      - [troquei a pouco tempo](bateria)
-      - a bateria [está média](bateria)
-      - a bateria [está boa](bateria)
-      - a bateria [está muito boa](bateria)
-      - a bateria [está ruim](bateria)
-      - a bateria [está mais ou menos](bateria)
-      - [não dura muito tempo](bateria)
-      - [muito boa](bateria)
-      - [média](bateria)
-      - [boa](bateria)
+      - bateria ta horrivel
+      - nem carrega mais
+      - viciada
+      - bateria ta otima
+      - 100% de saude
+      - ela ainda ta com 70%
+      - ruim
+      - excelente
+      - troquei a pouco tempo
+      - a bateria está média
+      - a bateria está boa
+      - a bateria está muito boa
+      - a bateria está ruim
+      - a bateria está mais ou menos
+      - não dura muito tempo
+      - muito boa
+      - média
+      - boa
 
   # - intent: venda_modelo
   #   examples: |
@@ -296,15 +296,15 @@ nlu:
 
   - intent: venda_descricao
     examples: |
-      - [meu produto é muito lindo, ele é cheiroso e novo](descricao)
-      - [ele possui carregador e esta vindo com fone](descricao)
-      - [por mais que esteja quebrado, ele ainda liga a lanterna](descricao)
-      - [nao quero colocar descricao](descricao)
-      - [descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique](descricao)
-      - [iphone top de linha](descricao)
-      - [celular em otima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado](descricao)
-      - [não acompanha carregador](descricao)
-      - [vem com a caixa do aparelho](descricao)
+      - meu produto é muito lindo, ele é cheiroso e novo
+      - ele possui carregador e esta vindo com fone
+      - por mais que esteja quebrado, ele ainda liga a lanterna
+      - nao quero colocar descricao
+      - descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique
+      - iphone top de linha
+      - celular em otima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado
+      - não acompanha carregador
+      - vem com a caixa do aparelho
 
   - intent: venda_revisao
     examples: |
@@ -354,17 +354,18 @@ nlu:
 
   - intent: interesse_produto
     examples: |
-      - [me interesso no produto](interesse)
-      - [interessante o produto](interesse)
-      - [gostei do produto](interesse)
-      - [me encantei no produto](interesse)
-      - [show de bola, gostei daquele](interesse)
-      - [nao tenho interesse](interesse)
-      - [quero nao] (interesse)
-      - [não me interesso](interesse)
-      - [não quero](interesse)
-      - [sem interesse](interesse)
+      - me interesso no produto
+      - interessante o produto
+      - gostei do produto
+      - me encantei no produto
+      - show de bola, gostei daquele
+      - nao tenho interesse
+      - quero nao
+      - não me interesso
+      - não quero
+      - sem interesse
 
+  # Como ficaria este? Ele tem que algum entity?
   - intent: retorno_lista_produtos
     examples: |
       - [quero voltar para a listagem](volta_listagem)
@@ -374,7 +375,6 @@ nlu:
       - [quero ver mais produtos](volta_listagem)
       - [ver lista de produtos](volta_listagem)
 
-# CADASTRO
   - regex: cep
     examples: |
       - \d{8}
@@ -405,15 +405,15 @@ nlu:
  
   - intent: complemento
     examples: |
-      - [nao possui complemento](complemento)
-      - [apartamento 102](complemento)
-      - [apt 304](complemento)
-      - [ap 408](complemento)
-      - [apê 210](complemento)
-      - [kitnet 05](complemento)
-      - [kitchenette 12](complemento)
-      - [quitinete 23](complemento)
-      - [fundos](complemento)
+      - nao possui complemento
+      - apartamento 102
+      - apt 304
+      - ap 408
+      - apê 210
+      - kitnet 05
+      - kitchenette 12
+      - quitinete 23
+      - fundos
     # - [ao lado do mercado da esquina] (complemento)
     # - [casa branca] (complemento)
     # - [arvores altas em cima] (complemento)
