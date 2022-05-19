@@ -14,6 +14,8 @@ pipeline:
     model: "pt_core_news_sm"
   - name: SpacyTokenizer
   - name: SpacyEntityExtractor
+    dimensions: ["PERSON"]
+    case_sensitive: False
   - name: SpacyFeaturizer
     pooling: mean
   - name: CountVectorsFeaturizer
@@ -21,7 +23,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 2
   - name: DIETClassifier
-    epochs: 1
+    epochs: 100
 
   # - name: WhitespaceTokenizer
   - name: RegexFeaturizer
