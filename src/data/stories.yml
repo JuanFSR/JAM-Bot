@@ -35,7 +35,8 @@ stories:
 #   - intent: afirmacao
 #   - action: utter_conclui_cadastro
 
-
+# still getting the conflict between actions and rules
+# change stories to acommmodate forms 
 
 - story: interactive_story_1
   steps:
