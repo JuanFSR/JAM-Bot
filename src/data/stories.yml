@@ -2,14 +2,14 @@ version: "3.1"
 
 stories:
 
-- story: inicio do bot
-  steps:
-    - intent: cumprimento
-    - action: utter_cumprimento
-    # criar um fork para afirmação e negação
-    - intent: afirmacao
-    - action: utter_afirmacao
-    - action: utter_despedida
+# - story: inicio do bot
+#   steps:
+#     - intent: cumprimento
+#     - action: utter_cumprimento
+#     # criar um fork para afirmação e negação
+#     - intent: afirmacao
+#     - action: utter_afirmacao
+#     - action: utter_despedida
     
 - story: cadastro negado
   steps:
@@ -19,21 +19,49 @@ stories:
   - action: utter_negacao
   - action: utter_despedida
 
-- story: cadastro
-  steps: 
+# - story: cadastro
+#   steps: 
+#   - intent: cumprimento
+#   - action: utter_cumprimento
+#   - intent: afirmacao
+#   - action: utter_cadastro
+#   - action: utter_nome_request
+#   - intent: nome_usuario
+#   - action: utter_cep_request
+#   - action: utter_complemento_request
+#   - intent: complemento
+#   - action: utter_confirma_dados_request
+#   # Criar um fork
+#   - intent: afirmacao
+#   - action: utter_conclui_cadastro
+
+# still getting the conflict between actions and rules
+# change stories to acommmodate forms 
+
+- story: interactive_story_1
+  steps:
   - intent: cumprimento
-  - action: utter_cadastro
+  - action: utter_cumprimento
   - intent: afirmacao
+  - action: utter_cadastro
   - action: utter_nome_request
   - intent: nome_usuario
+    entities:
+    - usuario: ivanilton
+  - slot_was_set:
+    - nome: ivanilton
   - action: utter_cep_request
   - intent: cep_usuario
+    entities:
+    - cep: 87302-150
+    - cep: 87302-150
+    - cep: 87302-150
+  - slot_was_set:
+    - cep: 87302-150
   - action: action_find_cep
   - action: utter_complemento_request
-  - intent: complemento
+  - intent: negacao
   - action: utter_confirma_dados_request
-  # Criar um fork
   - intent: afirmacao
   - action: utter_conclui_cadastro
-
-
+  - action: action_restart
