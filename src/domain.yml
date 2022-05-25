@@ -1,32 +1,79 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - bot_challenge
-
+- afirmacao
+- cep_usuario
+- complemento
+- cumprimento
+- desafia_bot
+- despedida
+- negacao
+- nome_usuario
+entities:
+- usuario
+- cep
+- numero_casa
+slots:
+  cep:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: cep
+  complemento:
+    type: text
+    mappings:
+    - type: from_text
+      intent: complemento
+  nome:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: usuario
+  numero_casa:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: numero_casa
 responses:
-  utter_greet:
-    - text: "Olá! Como você está?"
-
-  utter_cheer_up:
-    - text: "Aqui está algo para te alegrar:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Isso te ajudou?"
-
-  utter_happy:
-    - text: "Ótimo, siga em frente!"
-
-  utter_goodbye:
-    - text: "Tchau"
-
-  utter_iamabot:
-    - text: "Eu sou um bot feito com Rasa."
-
+  utter_cumprimento:
+  - text: Olá, tudo bem? Muito prazer eu sou o JAM! Antes de tudo, gostaria de saber se você deseja saber um pouco mais sobre o meu funcionamento.
+  utter_despedida:
+  - text: Obrigado por utilizar o JAM. Até a próxima
+  utter_afirmacao:
+  - text: O JAM possibilita que você venda ou compre um produto, de forma rápida e fácil, fazendo um pequeno cadastro apenas uma vez.
+  utter_cadastro:
+  - text: Você gostaria de se cadastrar no JAM?
+  utter_negacao:
+  - text: Como posso ajudar, então?
+  utter_desafia_bot:
+  - text: Eu sou um bot feito com Rasa.
+  utter_nome_request:
+  - text: Antes de tudo, preciso que me diga seu nome.
+  utter_cep_request:
+  - text: '{nome}, poderia me passar seu CEP? Não se preocupe, seu endereço estará seguro comigo.'
+  utter_complemento_request:
+  - text: Possui complemento? Se sim, me informe qual é. Caso contrário, apenas diga que não possui.
+  utter_confirma_dados_request:
+  - text: '{nome}, e o seu cep é {cep}.'
+  utter_conclui_cadastro:
+  - text: Prontinho, já salvei suas informações.
+  utter_corrige_cadastro:
+  - text: Digite novamente os seus dados?
+  utter_bot_perdido:
+  - text: Desculpe, não entendi. Poderia repetir?
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- action_find_cep
+- action_hello_world
+- utter_bot_perdido
+- utter_cadastro
+- utter_cep_request
+- utter_complemento_request
+- utter_conclui_cadastro
+- utter_confirma_dados_request
+- utter_cumprimento
+- utter_despedida
+- utter_negacao
+- utter_nome_request
