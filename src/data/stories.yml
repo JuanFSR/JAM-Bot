@@ -41,7 +41,9 @@ stories:
 - story: interactive_story_1
   steps:
   - intent: cumprimento
-  - action: utter_cumprimento
+  - slot_was_set:
+    - nome: ""
+  - action: utter_cumprimento # é vc?
   - intent: afirmacao
   - action: utter_cadastro
   - action: utter_nome_request
@@ -65,3 +67,28 @@ stories:
   - intent: afirmacao
   - action: utter_conclui_cadastro
   - action: action_restart
+
+- story: story_first_user
+  steps:
+  - intent: cumprimento
+  - slot_was_set:
+    - nome: null
+  - action: utter_cadastro
+
+- story: story_not_first_user_change_name
+  steps:
+  - intent: cumprimento
+  - slot_was_set:
+    - nome: ""
+  - action: utter_cumprimento # é vc?
+  - intent: negacao
+  - action: utter_cadastro
+
+- story: story_not_first_user_same_name
+  steps:
+  - intent: cumprimento
+  - slot_was_set:
+    - nome: ""
+  - action: utter_cumprimento # é vc?
+  - intent: afirmacao
+  # - action: utter_cadastro # perguntar se quer vender ou comprar
