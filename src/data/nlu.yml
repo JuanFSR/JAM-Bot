@@ -44,6 +44,16 @@ nlu:
     - okay
     - ahamn
     - correto
+    - sim, claro
+    - claro
+    - sim, pode ser
+    - pode ser
+    - sim, pode
+    - sim sim
+    - sim sim sim
+    - simmm
+    - sim, okay
+    - sim, tá bom
 - intent: negacao
   examples: |
     - não

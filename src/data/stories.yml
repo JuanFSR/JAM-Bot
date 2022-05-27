@@ -11,13 +11,13 @@ stories:
 #     - action: utter_afirmacao
 #     - action: utter_despedida
     
-- story: cadastro negado
-  steps:
-  - intent: cumprimento
-  - action: utter_cumprimento
-  - intent: negacao
-  - action: utter_negacao
-  - action: utter_despedida
+# - story: cadastro negado
+#   steps:
+#   - intent: cumprimento
+#   - action: utter_cumprimento
+#   - intent: negacao
+#   - action: utter_negacao
+#   - action: utter_despedida
 
 # - story: cadastro
 #   steps: 
@@ -38,57 +38,90 @@ stories:
 # still getting the conflict between actions and rules
 # change stories to acommmodate forms 
 
-- story: interactive_story_1
-  steps:
-  - intent: cumprimento
-  - slot_was_set:
-    - nome: ""
-  - action: utter_cumprimento # é vc?
-  - intent: afirmacao
-  - action: utter_cadastro
-  - action: utter_nome_request
-  - intent: nome_usuario
-    entities:
-    - usuario: ivanilton
-  - slot_was_set:
-    - nome: ivanilton
-  - action: utter_cep_request
-  - intent: cep_usuario
-    entities:
-    - cep: 87302-150
-    - cep: 87302-150
-    - cep: 87302-150
-  - slot_was_set:
-    - cep: 87302-150
-  - action: action_find_cep
-  - action: utter_complemento_request
-  - intent: negacao
-  - action: utter_confirma_dados_request
-  - intent: afirmacao
-  - action: utter_conclui_cadastro
-  - action: action_restart
+# - story: interactive_story_1
+#   steps:
+#   - intent: cumprimento
+#   - slot_was_set:
+#     - nome: ""
+#   - action: utter_cumprimento # é vc?
+#   - intent: afirmacao
+#   - action: utter_cadastro
+#   - action: utter_nome_request
+#   - intent: nome_usuario
+#     entities:
+#     - usuario: ivanilton
+#   - slot_was_set:
+#     - nome: ivanilton
+#   - action: utter_cep_request
+#   - intent: cep_usuario
+#     entities:
+#     - cep: 87302-150
+#     - cep: 87302-150
+#     - cep: 87302-150
+#   - slot_was_set:
+#     - cep: 87302-150
+#   - action: action_find_cep
+#   - action: utter_complemento_request
+#   - intent: negacao
+#   - action: utter_confirma_dados_request
+#   - intent: afirmacao
+#   - action: utter_conclui_cadastro
+#   - action: action_restart
+
+# trying to make forms work inside story - spoiler: it didn't
+# - story: story_first_user
+#   steps:
+#   - intent: cumprimento
+#   - slot_was_set:
+#     - nome: null
+#   - action: utter_cumprimento_novo_user
+#   - action: utter_cadastro
+#   - intent: afirmacao
+#   - active_loop: cadastro_form
+#   - slot_was_set:
+#     - requested_slot: nome
+#   - slot_was_set:
+#     - requested_slot: cep
+#   - slot_was_set:
+#     - requested_slot:  numero_casa
+#   - slot_was_set:
+#     - requested_slot:  complemento
+#   - action: utter_confirma_dados_request
 
 - story: story_first_user
   steps:
   - intent: cumprimento
   - slot_was_set:
     - nome: null
+  - action: utter_cumprimento_novo_user
   - action: utter_cadastro
-
-- story: story_not_first_user_change_name
-  steps:
-  - intent: cumprimento
-  - slot_was_set:
-    - nome: ""
-  - action: utter_cumprimento # é vc?
-  - intent: negacao
-  - action: utter_cadastro
-
-- story: story_not_first_user_same_name
-  steps:
-  - intent: cumprimento
-  - slot_was_set:
-    - nome: ""
-  - action: utter_cumprimento # é vc?
   - intent: afirmacao
+
+# - story: story_first_user_deny
+#   steps:
+#   - intent: cumprimento
+#   - slot_was_set:
+#     - nome: null
+#   - action: utter_cumprimento_novo_user
+#   - action: utter_cadastro
+#   - intent: negacao
+#   - action: utter_negacao
+#   - action: utter_despedida
+
+# - story: story_not_first_user_change_name
+#   steps:
+#   - intent: cumprimento
+#   - slot_was_set:
+#     - nome: "nome tal"
+#   - action: utter_cumprimento # é vc?
+#   - intent: negacao
+#   - action: utter_cadastro
+
+# - story: story_not_first_user_same_name
+  # steps:
+  # - intent: cumprimento
+  # - slot_was_set:
+  #   - nome: "nome tal"
+  # - action: utter_cumprimento # é vc?
+  # - intent: afirmacao
   # - action: utter_cadastro # perguntar se quer vender ou comprar

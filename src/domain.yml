@@ -21,22 +21,34 @@ slots:
       entity: cep
   complemento:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_text
       intent: complemento
   nome:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: usuario
   numero_casa:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: numero_casa
+forms:
+  cadastro_form:
+    required_slots:
+    - nome
+    - cep
+    - numero_casa
+    - complemento
 responses:
   utter_cumprimento:
-  - text: Olá, tudo bem? Muito prazer eu sou o JAM! Antes de tudo, gostaria de saber se você deseja saber um pouco mais sobre o meu funcionamento.
+  - text: Olá, eu sou o JAM, tudo bem? Estava conversando com {nome} da última vez. É você?
+  utter_cumprimento_novo_user:
+  - text: Olá, eu sou o JAM. Eu ainda não te conheço.
   utter_despedida:
   - text: Obrigado por utilizar o JAM. Até a próxima
   utter_afirmacao:
@@ -47,11 +59,13 @@ responses:
   - text: Como posso ajudar, então?
   utter_desafia_bot:
   - text: Eu sou um bot feito com Rasa.
-  utter_nome_request:
+  utter_ask_nome:
   - text: Antes de tudo, preciso que me diga seu nome.
-  utter_cep_request:
+  utter_ask_cep:
   - text: '{nome}, poderia me passar seu CEP? Não se preocupe, seu endereço estará seguro comigo.'
-  utter_complemento_request:
+  utter_ask_numero_casa:
+  - text: Qual o número da casa?
+  utter_ask_complemento:
   - text: Possui complemento? Se sim, me informe qual é. Caso contrário, apenas diga que não possui.
   utter_confirma_dados_request:
   - text: '{nome}, e o seu cep é {cep}.'
@@ -69,11 +83,14 @@ actions:
 - action_hello_world
 - utter_bot_perdido
 - utter_cadastro
-- utter_cep_request
-- utter_complemento_request
+- utter_ask_nome
+- utter_ask_cep
+- utter_ask_complemento
+- utter_ask_numero_casa
 - utter_conclui_cadastro
 - utter_confirma_dados_request
 - utter_cumprimento
+- utter_cumprimento_novo_user
 - utter_despedida
 - utter_negacao
-- utter_nome_request
+- utter_submit
