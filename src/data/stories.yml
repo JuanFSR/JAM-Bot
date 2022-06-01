@@ -83,9 +83,9 @@ stories:
   - slot_was_set:
     - requested_slot: cep
   - slot_was_set:
-    - requested_slot:  numero_casa
+    - requested_slot: numero_casa
   - slot_was_set:
-    - requested_slot:  complemento
+    - requested_slot: complemento
   - slot_was_set:
     - requested_slot: null
   - active_loop: null

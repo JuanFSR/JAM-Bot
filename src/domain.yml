@@ -36,8 +36,8 @@ slots:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_text
-      intent: numero_casa
+    - type: from_entity
+      entity: casa_numero
 forms:
   cadastro_form:
     required_slots:
