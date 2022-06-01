@@ -17,6 +17,7 @@ nlu:
     - boanoite
     - bora
     - vamos lá
+    - Oi
 - intent: despedida
   examples: |
     - até
@@ -54,6 +55,7 @@ nlu:
     - simmm
     - sim, okay
     - sim, tá bom
+    - Sim
 - intent: negacao
   examples: |
     - não
@@ -320,12 +322,23 @@ nlu:
     - [90.550-031](cep)
     - [90.550031](cep)
     - [87302-150][{"entity": "cep"}, {"entity": "cep"}, {"entity": "cep"}]
+    - meu cep é: [87300200][{"entity": "cep"}, {"entity": "cep"}, {"entity": "cep"}]
 - intent: numero_casa
   examples: |
-    - o número é [123](numero_casa)
-    - o número da casa é [7850](numero_casa)
-    - [325](numero_casa)
-    - casa [45](numero_casa)
+    - [o número é 123](casa_numero)
+    - [o número é 513](casa_numero)
+    - [o número é 263](casa_numero)
+    - [o número é 782](casa_numero)
+    - [o número da casa é 7850](casa_numero)
+    - [325](casa_numero)
+    - [12](casa_numero)
+    - [85](casa_numero)
+    - [casa 45](casa_numero)
+    - [casa 200](casa_numero)
+    - [casa 4596](casa_numero)
+    - [casa 34](casa_numero)
+    - [o número de casa é 153](casa_numero)
+    - [o número é 123](casa_numero)
 - intent: complemento
   examples: |
     - nao possui complemento
@@ -357,6 +370,7 @@ nlu:
     - é [miriam](usuario)
     - [maria clara](usuario)
     - meu nome é [ivanilton](usuario)
+    - meu nome é [ana clara](usuario)
 - synonym: custo-beneficio
   examples: |
     - custo-beneficio

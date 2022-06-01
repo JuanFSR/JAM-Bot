@@ -69,6 +69,29 @@ stories:
 #   - action: action_restart
 
 # trying to make forms work inside story - spoiler: it didn't
+- story: story_first_user
+  steps:
+  - intent: cumprimento
+  # - slot_was_set:
+  #   - nome: null
+  # - action: utter_cumprimento_novo_user
+  - action: utter_cadastro
+  - intent: afirmacao
+  - active_loop: cadastro_form
+  - slot_was_set:
+    - requested_slot: nome
+  - slot_was_set:
+    - requested_slot: cep
+  - slot_was_set:
+    - requested_slot:  numero_casa
+  - slot_was_set:
+    - requested_slot:  complemento
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_confirma_dados_request
+
 # - story: story_first_user
 #   steps:
 #   - intent: cumprimento
@@ -77,25 +100,6 @@ stories:
 #   - action: utter_cumprimento_novo_user
 #   - action: utter_cadastro
 #   - intent: afirmacao
-#   - active_loop: cadastro_form
-#   - slot_was_set:
-#     - requested_slot: nome
-#   - slot_was_set:
-#     - requested_slot: cep
-#   - slot_was_set:
-#     - requested_slot:  numero_casa
-#   - slot_was_set:
-#     - requested_slot:  complemento
-#   - action: utter_confirma_dados_request
-
-- story: story_first_user
-  steps:
-  - intent: cumprimento
-  - slot_was_set:
-    - nome: null
-  - action: utter_cumprimento_novo_user
-  - action: utter_cadastro
-  - intent: afirmacao
 
 # - story: story_first_user_deny
 #   steps:

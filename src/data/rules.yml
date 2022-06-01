@@ -25,6 +25,10 @@ rules:
 # --- FORMS ---
 # -- Cadastro --
 - rule: Activate Cadastro Form
+  # - intent: afirmacao # dessa maneira, irá ativar sempre que o usuário disser sim :(
+  condition:
+  - slot_was_set: 
+    - nome: false
   steps:
   - intent: afirmacao # dessa maneira, irá ativar sempre que o usuário disser sim :(
   - action: cadastro_form

@@ -8,10 +8,11 @@ intents:
 - despedida
 - negacao
 - nome_usuario
-entities:
-- usuario
-- cep
 - numero_casa
+entities:
+- cep
+- usuario
+- casa_numero
 slots:
   cep:
     type: text
@@ -35,8 +36,8 @@ slots:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: numero_casa
+    - type: from_text
+      intent: numero_casa
 forms:
   cadastro_form:
     required_slots:
@@ -68,25 +69,27 @@ responses:
   utter_ask_complemento:
   - text: Possui complemento? Se sim, me informe qual é. Caso contrário, apenas diga que não possui.
   utter_confirma_dados_request:
-  - text: '{nome}, e o seu cep é {cep}.'
+  - text: 'Seu nome é: {nome}, e o seu cep é {cep}.'
   utter_conclui_cadastro:
   - text: Prontinho, já salvei suas informações.
   utter_corrige_cadastro:
   - text: Digite novamente os seus dados?
   utter_bot_perdido:
   - text: Desculpe, não entendi. Poderia repetir?
+  utter_submit:
+  - text: Muito obrigado!
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
 - action_find_cep
 - action_hello_world
-- utter_bot_perdido
-- utter_cadastro
-- utter_ask_nome
 - utter_ask_cep
 - utter_ask_complemento
+- utter_ask_nome
 - utter_ask_numero_casa
+- utter_bot_perdido
+- utter_cadastro
 - utter_conclui_cadastro
 - utter_confirma_dados_request
 - utter_cumprimento
