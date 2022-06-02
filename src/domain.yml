@@ -10,9 +10,9 @@ intents:
 - nome_usuario
 - numero_casa
 entities:
+- casa_numero
 - cep
 - usuario
-- casa_numero
 slots:
   cep:
     type: text

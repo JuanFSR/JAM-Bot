@@ -72,11 +72,9 @@ stories:
 - story: story_first_user
   steps:
   - intent: cumprimento
-  # - slot_was_set:
-  #   - nome: null
-  # - action: utter_cumprimento_novo_user
   - action: utter_cadastro
   - intent: afirmacao
+  - action: cadastro_form
   - active_loop: cadastro_form
   - slot_was_set:
     - requested_slot: nome
@@ -129,3 +127,29 @@ stories:
   # - action: utter_cumprimento # é vc?
   # - intent: afirmacao
   # - action: utter_cadastro # perguntar se quer vender ou comprar
+# - story: interactive_story_1
+#   steps:
+#   - intent: cumprimento
+#   - action: utter_cadastro
+#   - intent: afirmacao
+#   - action: cadastro_form
+#   - active_loop: cadastro_form
+#   - slot_was_set:
+#     - requested_slot: nome
+#   - slot_was_set:
+#     - nome: ana
+#   - slot_was_set:
+#     - requested_slot: cep
+#   - slot_was_set:
+#     - cep: '87300200'
+#   - slot_was_set:
+#     - numero_casa: '87300200'
+#   - slot_was_set:
+#     - requested_slot: complemento
+#   - slot_was_set:
+#     - complemento: nao tem complemento
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_submit
+#   - action: utter_confirma_dados_request
