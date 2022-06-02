@@ -321,8 +321,8 @@ nlu:
     - [90550-031](cep)
     - [90.550-031](cep)
     - [90.550031](cep)
-    - [87302-150][{"entity": "cep"}, {"entity": "cep"}, {"entity": "cep"}]
-    - meu cep é: [87300200][{"entity": "cep"}, {"entity": "cep"}, {"entity": "cep"}]
+    - [87302-150][cep)
+    - meu cep é: [87300200](cep)
 - intent: numero_casa
   examples: |
     - o número é [123](casa_numero)
