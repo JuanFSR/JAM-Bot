@@ -25,8 +25,13 @@ class FindCep(Action):
         cep = 87300200
         response = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep))
         response = response.json()
-        message = 'Rua: ' + str(response['logradouro']) + ', bairro: ' + str(response['bairro']) + ', ' + str(response['localidade']) + ' ' + str(response['uf'])
   
-        dispatcher.utter_message(text=message)
+        
+        nome = tracker.get_slot('nome')
+        complemento = tracker.get_slot('complemento')
+        num_casa = tracker.get_slot('numero_casa')
 
+        message = f'{nome}, você mora na rua {str(response['logradouro'])}, bairro: {str(response['bairro'])}, {str(response['localidade'])} {str(response['uf'])}, numero: {num_casa}, complemento: {complemento}?'
+        dispatcher.utter_message(text=message)
+        
         return []
