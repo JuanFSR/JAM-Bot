@@ -31,7 +31,7 @@ class FindCep(Action):
         complemento = tracker.get_slot('complemento')
         num_casa = tracker.get_slot('numero_casa')
 
-        message = f'{nome}, você mora na rua {str(response['logradouro'])}, bairro: {str(response['bairro'])}, {str(response['localidade'])} {str(response['uf'])}, numero: {num_casa}, complemento: {complemento}?'
+        message = f"{nome}, você mora na rua {str(response['logradouro'])}, bairro: {str(response['bairro'])}, {str(response['localidade'])}, {str(response['uf'])}, numero: {num_casa}, complemento: {complemento}?"
         dispatcher.utter_message(text=message)
         
         return []
