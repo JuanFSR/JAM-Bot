@@ -72,6 +72,7 @@ stories:
 - story: story_first_user
   steps:
   - intent: cumprimento
+  - action: utter_cumprimento_novo_user
   - action: utter_cadastro
   - intent: afirmacao
   - action: cadastro_form
@@ -90,6 +91,8 @@ stories:
   - action: utter_submit
   # - action: utter_confirma_dados_request
   - action: action_find_cep
+  - intent: afirmacao
+  - action: utter_conclui_cadastro
 
 
 # - story: story_first_user
