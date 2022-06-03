@@ -38,6 +38,9 @@ slots:
     mappings:
     - type: from_entity
       entity: casa_numero
+      conditions: 
+      - active_loop: cadastro_form
+        requested_slot: numero_casa
 forms:
   cadastro_form:
     required_slots:

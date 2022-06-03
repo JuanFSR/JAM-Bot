@@ -69,31 +69,53 @@ stories:
 #   - action: action_restart
 
 # trying to make forms work inside story - spoiler: it didn't
+# - story: story_first_user
+#   steps:
+#   - intent: cumprimento
+#   - action: utter_cumprimento_novo_user
+#   - action: utter_cadastro
+#   - intent: afirmacao
+#   - action: cadastro_form
+#   - active_loop: cadastro_form
+#   - slot_was_set:
+#     - requested_slot: nome
+#   - slot_was_set:
+#     - requested_slot: cep
+#   - slot_was_set:
+#     - requested_slot: numero_casa
+#   - slot_was_set:
+#     - requested_slot: complemento
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   # - action: utter_submit
+#   # # - action: utter_confirma_dados_request
+#   # - action: action_find_cep
+#   - intent: afirmacao
+#   - action: utter_conclui_cadastro
+
+# recusa cadastro
 - story: story_first_user
   steps:
   - intent: cumprimento
   - action: utter_cumprimento_novo_user
   - action: utter_cadastro
-  - intent: afirmacao
-  - action: cadastro_form
-  - active_loop: cadastro_form
-  - slot_was_set:
-    - requested_slot: nome
-  - slot_was_set:
-    - requested_slot: cep
-  - slot_was_set:
-    - requested_slot: numero_casa
-  - slot_was_set:
-    - requested_slot: complemento
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_submit
-  # - action: utter_confirma_dados_request
-  - action: action_find_cep
-  - intent: afirmacao
-  - action: utter_conclui_cadastro
+  - intent: negacao
+  - action: utter_despedida
 
+# criar intent de mudar cadastro
+# o campo que a pessoa quer mudar é uma entidade
+# - desejo mudar o [endereco](entity: campo_errado, value: logradouro)
+# - desejo mudar a [cidade](campo_errado))
+#quando reconhecer o intent mudarcadastro, chamar um custom action
+#custom action deve verificar o value do slot (from_entity) campo_errado
+#suponha que o campo_errado é logradouro; seta o slot do logradouro pra null
+#o próximo passo da story é reativar o form (que vai pedir apenas o logradouro)
+- story: teste
+  steps:
+  - action: action_find_cep
+  - intent: negacao 
+  - action: utter_despedida
 
 # - story: story_first_user
 #   steps:
