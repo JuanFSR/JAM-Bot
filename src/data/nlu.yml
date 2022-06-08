@@ -17,6 +17,7 @@ nlu:
     - boanoite
     - bora
     - vamos lá
+    - Oi
 - intent: despedida
   examples: |
     - até
@@ -44,6 +45,17 @@ nlu:
     - okay
     - ahamn
     - correto
+    - sim, claro
+    - claro
+    - sim, pode ser
+    - pode ser
+    - sim, pode
+    - sim sim
+    - sim sim sim
+    - simmm
+    - sim, okay
+    - sim, tá bom
+    - Sim
 - intent: negacao
   examples: |
     - não
@@ -53,15 +65,6 @@ nlu:
     - nunca
     - jamais
     - acho que não
-    - não possui
-    - não tem
-    - sem complemento
-    - não tem complemento
-    - não possui complemento
-    - não possui número
-    - não tem número
-    - não tem número de casa
-    - sem número
     - não quero
 - intent: desafia_bot
   examples: |
@@ -309,20 +312,46 @@ nlu:
     - [90550-031](cep)
     - [90.550-031](cep)
     - [90.550031](cep)
-    - [87302-150][{"entity": "cep"}, {"entity": "cep"}, {"entity": "cep"}]
+    - [87302-150][cep)
+    - meu cep é: [87300200][{"entity": "casa_numero"}, {"entity": "cep"}, {"entity": "cep"}]
 - intent: numero_casa
   examples: |
-    - o número é [123](numero_casa)
-    - o número da casa é [7850](numero_casa)
-    - [325](numero_casa)
-    - casa [45](numero_casa)
+    - o número é [123](casa_numero)
+    - o número é [513](casa_numero)
+    - o número é [263](casa_numero)
+    - o número é [782](casa_numero)
+    - o número da casa é [7850](casa_numero)
+    - [325](casa_numero)
+    - [12](casa_numero)
+    - [85](casa_numero)
+    - casa [45](casa_numero)
+    - casa [200](casa_numero)
+    - casa [4596](casa_numero)
+    - casa [34](casa_numero)
+    - o número de casa é [153](casa_numero)
 - intent: complemento
   examples: |
     - nao possui complemento
+    - nao tem complemento
+    - não tem
+    - não possui
     - apartamento 102
+    - apartamento 406
+    - apartamento 309
+    - apartamento 200
+    - apartamento 1094
+    - Apartamento 102
+    - Apartamento 406
+    - Apartamento 309
+    - Apartamento 200
+    - Apartamento 1094
     - apt 304
+    - APT 304
     - ap 408
     - apê 210
+    - apê 500
+    - Apê 509
+    - apê 02
     - kitnet 05
     - kitchenette 12
     - quitinete 23
@@ -347,6 +376,8 @@ nlu:
     - é [miriam](usuario)
     - [maria clara](usuario)
     - meu nome é [ivanilton](usuario)
+    - meu nome é [ana clara](usuario)
+    - meu nome é [ana](usuario)
 - synonym: custo-beneficio
   examples: |
     - custo-beneficio

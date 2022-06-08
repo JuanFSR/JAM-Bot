@@ -22,11 +22,16 @@ class FindCep(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        cep = 87300200
+        cep = tracker.get_slot('cep')
         response = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep))
         response = response.json()
-        message = 'Rua: ' + str(response['logradouro']) + ', bairro: ' + str(response['bairro']) + ', ' + str(response['localidade']) + ' ' + str(response['uf'])
   
-        dispatcher.utter_message(text=message)
+        
+        nome = tracker.get_slot('nome')
+        complemento = tracker.get_slot('complemento')
+        num_casa = tracker.get_slot('numero_casa')
 
+        message = f"{nome}, você mora na {str(response['logradouro'])}, {num_casa}, {complemento}, {str(response['bairro'])}, {str(response['localidade'])}, {str(response['uf'])}?"
+        dispatcher.utter_message(text=message)
+        
         return []
