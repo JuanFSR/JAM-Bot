@@ -9,10 +9,24 @@ intents:
 - negacao
 - nome_usuario
 - numero_casa
+- vender
+- produto
+- venda_itens
+- venda_estado
+- venda_condicoes
+- venda_tempo
+- venda_bateria
+- venda_valor
+- venda_descricao
 entities:
 - casa_numero
 - cep
 - usuario
+- produto
+- itens
+- estado
+- valor
+- venda
 slots:
   cep:
     type: text
@@ -41,6 +55,54 @@ slots:
       conditions: 
       - active_loop: cadastro_form
         requested_slot: numero_casa
+  produto:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: produto
+  itens:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: itens
+  estado:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: estado
+  condicao:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent: venda_condicoes
+  tempo:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent: venda_tempo
+  bateria: 
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent: venda_bateria
+  valor:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: valor
+  descricao:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent: venda_descricao
 forms:
   cadastro_form:
     required_slots:
@@ -48,17 +110,27 @@ forms:
     - cep
     - numero_casa
     - complemento
+  venda_form:
+    required_slots:
+    - produto
+    - itens
+    - estado
+    - condicao
+    - tempo
+    - bateria
+    - valor
+    - descricao
 responses:
   utter_cumprimento:
   - text: Olá, eu sou o JAM, tudo bem? Estava conversando com {nome} da última vez. É você?
   utter_cumprimento_novo_user:
-  - text: Olá, eu sou o JAM. Eu ainda não te conheço.
+  - text: Olá, eu sou o JAM, possibilito que você venda ou compre um produto, de forma rápida e fácil.
+  utter_cadastro:
+  - text: Notei que ainda não te conheço. Você gostaria de se cadastrar no JAM?
   utter_despedida:
   - text: Obrigado por utilizar o JAM. Até a próxima
   utter_afirmacao:
   - text: O JAM possibilita que você venda ou compre um produto, de forma rápida e fácil, fazendo um pequeno cadastro apenas uma vez.
-  utter_cadastro:
-  - text: Você gostaria de se cadastrar no JAM?
   utter_negacao:
   - text: Como posso ajudar, então?
   utter_desafia_bot:
@@ -76,11 +148,33 @@ responses:
   utter_conclui_cadastro:
   - text: Prontinho, já salvei suas informações.
   utter_corrige_cadastro:
-  - text: Digite novamente os seus dados?
+  - text: Digite novamente os seus dados
   utter_bot_perdido:
   - text: Desculpe, não entendi. Poderia repetir?
   utter_submit:
   - text: Muito obrigado!
+  utter_pergunta:
+  - text: Como posso te ajudar, {nome}? Gostaria de vender ou comprar?
+  utter_ask_produto:
+  - text: Qual o produto que você quer vender?
+  utter_ask_itens:
+  - text: Quantos itens deste produto você quer vender? (E.g. 1 item, 3 itens, etc)
+  utter_ask_estado:
+  - text: Qual o estado do produto, novo ou usado?
+  utter_ask_condicao:
+  - text: Qual a condição em que o produto se encontra? (E.g. possui algumas marcas de uso, está sem arranhões, etc.)
+  utter_ask_tempo:
+  - text: Há quanto tempo você possui este produto? (E.g. 1 ano, 3 meses, desde 2019, etc.)
+  utter_ask_bateria:
+  - text: Como está a bateria do {produto}? (E.g. a bateria está boa, a bateria não dura muito etc.)
+  utter_ask_valor:
+  - text: Qual será o valor de venda do produto? (E.g. R$ 1000,00, 1500 reais)
+  utter_ask_descricao:
+  - text: Deseja adicionar uma descrição sobre o produto? (E.g. Vem com carregador e fone, acompanha capinhas, etc.)
+  utter_confirma_venda:
+  - text: 'Você quer vender o produto {produto} com {itens} itens, no estado {estado}, com a condição {condicao}, que possui {tempo} e com a bateria {bateria}, que custa {valor} e que tem a descrição {descricao}. Correto?'
+  utter_submit_venda:
+  - text: Pronto! Seu {produto} foi cadastrado com sucesso.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -100,3 +194,12 @@ actions:
 - utter_despedida
 - utter_negacao
 - utter_submit
+- utter_ask_produto
+- utter_ask_itens
+- utter_ask_estado
+- utter_ask_condicao
+- utter_ask_tempo
+- utter_ask_bateria
+- utter_ask_valor
+- utter_ask_descricao
+- utter_confirma_venda

@@ -128,21 +128,34 @@ nlu:
     - [1](itens)
 - intent: venda_estado
   examples: |
-    - o produto se encontra no estado [estado_novo](estado)
-    - o produto se encontra no estado [estado_ruim](estado)
-    - está [estado_novo](estado)
-    - está [estado_ruim](estado)
-    - ta bastante [estado_novo](estado)
-    - ta bastante [estado_ruim](estado)
-    - ele ta meio [estado_novo](estado)
-    - ele ta meio [estado_ruim](estado)
-    - [estado_novo](estado)
-    - [estado_ruim](estado)
+    - o produto se encontra no estado [novo](estado)
+    - o produto se encontra no estado [usado](estado)
+    - o produto é [novo](estado)
+    - o produto é [usado](estado)
+    - o produto está [novo](estado)
+    - o produto está [novíssimo](estado)
+    - o produto está [usado](estado)
+    - o produto está [gasto](estado)
+    - está [novo](estado)
+    - está [novíssimo](estado)
+    - está [usado](estado)
+    - está [gasto](estado)
+    - ta bastante [gasto](estado)
+    - ta bastante [usado](estado)
+    - ele ta meio [gasto](estado)
+    - ele ta meio [usado](estado)
+    - está bem [gasto](estado)
+    - está bem [usado](estado)
+    - está bem [novo](estado)
+    - está muito [usado](estado)
+    - [novo](estado)
+    - [usado](estado)
+    - [gasto](estado)
 - intent: venda_condicoes
   examples: |
     - a condição nao tá muito boa
     - tá horrivel
-    - tá um pouco gastado so
+    - tá um pouco gasto só
     - não esta com um bom funcionamento
     - ta funcionando mais ou menos
     - olha, ele liga
@@ -154,89 +167,150 @@ nlu:
     - tela trincada
     - bateria estufada
     - a tela nao ta ligando
+    - a tela não está ligando
     - o carregador nao carrega
     - ta sem bateria
     - bateria viciou
     - ele não funciona
     - ele não liga
-    - não há marcas de uso porém ele não liga
-    - possui riscos na tela porém funcionando em perfeito estado
-    - está em bom funcionamento com poucos arranhões
     - bateria viciada
-    - está em bom funcionamento sem marcas na tela
-    - bom funcionamento
     - está com a tela quebrada
+    - câmera quebrada
+    - câmera frontal não funciona
+    - câmera frontal quebrada
+    - câmera traseira não funciona
+    - câmera traseira quebrada
+    - botão quebrado
+    - botão não funciona
+    - possui algumas marcas de uso
+    - possui marcas de uso
+    - possui arranhões
+    - possui arranhão na tela
+    - possui arranhão na câmera
+    - possui amassado na lateral
+    - possui amassado na traseira
+    - não há marcas de uso, porém ele não liga
+    - possui riscos na tela, porém funcionando em perfeito estado
+    - bom funcionamento, com poucos arranhões
+    - está em bom funcionamento, com poucos arranhões
+    - está em bom funcionamento, sem marcas na tela
+    - bom funcionamento, sem marcas na tela
+    - bom funcionamento
+    - não há marcas de uso
+    - não há marca alguma
+    - sem marcas de uso
+    - sem defeitos
+    - não há defeitos
+    - está perfeito
+    - não possui marcas de uso
+    - não possui defeitos
+    - não possui riscos
+    - não possui riscos na tela
 - intent: venda_tempo
   examples: |
     - 2 anos, 1 mes, 23 dias, 2 horas e 12 segundos
     - usei ele por 1 dia
-    - foi muito tempo
+    - usei ele por 2 meses
+    - usei ele por 3 anos
+    - utilizo há 1 ano
+    - utilizei por 2 dias
+    - faz 4 anos
+    - faz 2 meses
+    - faz 3 dias
+    - faz 1 semana
+    - faz muito tempo
     - nao me lembro
-    - ate que pouco
+    - não sei
+    - até que pouco
     - um pouquinho
+    - pouco tempo
     - varios dias
-    - bastante
-    - 1 mes
-    - 100 mes
+    - alguns dias
     - mais ou menos 10 meses
-    - um ano
+    - por volta de 6 anos
+    - por volta de 4 meses
+    - entorno de 2 anos
+    - entorno de 1 ano e 3 meses
+    - três dias
     - uma semana
+    - quatro meses
+    - um ano
+    - 2 semanas
     - 5 dias
+    - 1 mês
+    - 4 meses
+    - 6 meses
     - 4 anos
     - 2 anos e 3 meses
     - 3 anos
-    - 6 meses
 - intent: venda_bateria
   examples: |
-    - bateria ta horrivel
-    - nem carrega mais
-    - viciada
-    - bateria ta otima
-    - 100% de saude
-    - ela ainda ta com 70%
-    - ruim
-    - excelente
-    - troquei a pouco tempo
+    - a bateria ta horrivel
+    - a bateria nem carrega mais
+    - a bateria está viciada
+    - a bateria ta otima
     - a bateria está média
     - a bateria está boa
     - a bateria está muito boa
     - a bateria está ruim
     - a bateria está mais ou menos
     - não dura muito tempo
-    - muito boa
-    - média
-    - boa
+    - bateria dura pouco
+    - está com 100% de saúde
+    - ela ainda ta com 70%
+    - troquei ha pouco tempo
 - intent: venda_valor
   examples: |
     - quero vender por [2 reais](valor)
-    - por [160 reais](valor)
-    - [1500 reais](valor)
-    - [R$ 2,00](valor)
-    - [R$ 2.00](valor)
-    - [R$ 2,15](valor)
+    - por [1600 reais](valor)
+    - [R$ 1.000](valor)
+    - [R$ 9852,00](valor)
+    - [R$ 780.00](valor)
+    - [R$ 7500,15](valor)
     - [R$ 2.15](valor)
-    - [2,00](valor)
-    - [2.00](valor)
-    - [2345](valor)
-    - [2](valor)
+    - [R$8500](valor)
+    - [R$9400,50](valor)
+    - [R$11200.99](valor)
+    - [1500 reais](valor)
+    - [7300,00 reais](valor)
+    - [2369.75 reais](valor)
+    - [2650,00](valor)
+    - [3550.00](valor)
+    - [500](valor)
     - [2000](valor)
-    - [R$ 1.000,00](valor)
     - [13000.50](valor)
-    - [7300 reais](valor)
 - intent: venda_foto
   examples: |
     - [foto] (foto)
 - intent: venda_descricao
   examples: |
-    - meu produto é muito lindo, ele é cheiroso e novo
-    - ele possui carregador e esta vindo com fone
-    - por mais que esteja quebrado, ele ainda liga a lanterna
-    - nao quero colocar descricao
-    - descricao: um celular bonitao, azul e pode ser todo seu com apenas um clique
-    - iphone top de linha
-    - celular em otima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado
-    - não acompanha carregador
     - vem com a caixa do aparelho
+    - vem com carregador
+    - vem com fone de ouvido
+    - vem com fone de ouvido original e carregador original
+    - possui carregador
+    - possui fone de ouvido
+    - possui fone de ouvido e carregador
+    - possui fone de ouvido original e carregador original
+    - acompanha caixa original
+    - acompanha carregador original
+    - acompanha fone de ouvido original
+    - acompanha fone de ouvido e carregador
+    - acompanha capinhas
+    - não vem com carregador
+    - não vem com fone de ouvido
+    - não vem com fone de ouvido nem carregador
+    - não acompanha carregador
+    - não acompanha fone de ouvido
+    - vendo as capinhas separado
+    - ele possui carregador e está vindo com fone
+    - ele possui fone de ouvido e está vindo com carregador
+    - ele possui fone de ouvido e carregador e está vindo com caixa
+    - nao quero colocar descrição
+    - sem descrição
+    - não possui descrição
+    - celular em ótima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado
+
 - intent: venda_revisao
   examples: |
     - quero [rever a informação](revisao) sobre [bateria](revisao_tipo)

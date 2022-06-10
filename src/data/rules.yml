@@ -47,3 +47,23 @@ rules:
   - action: action_find_cep
   - intent: afirmacao
   - action: utter_conclui_cadastro
+  - action: utter_pergunta
+
+# -- Venda --
+- rule: Activate Venda Form
+  steps:
+  - intent: vender 
+  - action: venda_form
+  - active_loop: venda_form
+
+- rule: Submit Venda Form
+  condition: #Considerando que este form está ativo
+  - active_loop: venda_form
+  steps:
+  - action: venda_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null #slots preenchidos
+  - action: utter_confirma_venda
+  - intent: afirmacao
+  - action: utter_submit
