@@ -22,6 +22,18 @@ rules:
   - intent: cep_usuario
   - action: action_find_cep
 
+- rule: accept restart values
+  steps:
+  - action: action_find_cep
+  - intent: negacao 
+  - action: action_restart_values
+
+- rule: finish_user
+  steps:
+  - action: action_restart_values
+  - intent: negacao
+  - action: utter_despedida
+
 # --- FORMS ---
 # -- Cadastro --
 - rule: Activate Cadastro Form
@@ -42,10 +54,10 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null #slots preenchidos
-  - action: utter_submit
   # - action: utter_confirma_dados_request
   - action: action_find_cep
   - intent: afirmacao
+  - action: utter_submit
   - action: utter_conclui_cadastro
   - action: utter_pergunta
 
