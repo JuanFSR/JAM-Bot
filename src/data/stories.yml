@@ -111,11 +111,12 @@ stories:
 #custom action deve verificar o value do slot (from_entity) campo_errado
 #suponha que o campo_errado é logradouro; seta o slot do logradouro pra null
 #o próximo passo da story é reativar o form (que vai pedir apenas o logradouro)
-- story: teste
-  steps:
-  - action: action_find_cep
-  - intent: negacao 
-  - action: utter_despedida
+# - story: teste
+#   steps:
+#   - action: action_find_cep
+#   - intent: negacao 
+#   - action: action_restart_values
+#   - active_loop: cadastro_form
 
 # - story: story_first_user
 #   steps:

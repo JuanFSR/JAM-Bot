@@ -85,6 +85,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
+- action_restart_values
 - action_find_cep
 - action_hello_world
 - utter_ask_cep
