@@ -59,6 +59,11 @@ nlu:
 - intent: negacao
   examples: |
     - não
+    - Não
+    - não, obrigado
+    - não quero não
+    - n quero n
+    - n quero
     - n
     - ñ
     - nao
