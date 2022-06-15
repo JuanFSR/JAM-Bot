@@ -18,16 +18,27 @@ intents:
 - venda_bateria
 - venda_valor
 - venda_descricao
+- comprar
+- selecionar_produto
+- interesse_produto
 entities:
 - casa_numero
 - cep
 - usuario
+- venda
 - produto
 - itens
 - estado
 - valor
-- venda
+- compra
+- escolher_produto
 slots:
+  nome:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: usuario
   cep:
     type: text
     influence_conversation: true
@@ -40,12 +51,6 @@ slots:
     mappings:
     - type: from_text
       intent: complemento
-  nome:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: usuario
   numero_casa:
     type: text
     influence_conversation: true
@@ -103,6 +108,18 @@ slots:
     mappings:
     - type: from_text
       intent: venda_descricao
+  selecionar:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: escolher_produto
+  interesse:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent: interesse_produto
 forms:
   cadastro_form:
     required_slots:
@@ -120,6 +137,11 @@ forms:
     - bateria
     - valor
     - descricao
+  compra_form:
+    required_slots:
+    - produto
+    - selecionar
+    - interesse
 responses:
   utter_cumprimento:
   - text: Olá, eu sou o JAM, tudo bem? Estava conversando com {nome} da última vez. É você?
@@ -156,7 +178,7 @@ responses:
   utter_pergunta:
   - text: Como posso te ajudar, {nome}? Gostaria de vender ou comprar?
   utter_ask_produto:
-  - text: Qual o produto que você quer vender?
+  - text: Qual produto?
   utter_ask_itens:
   - text: Quantos itens deste produto você quer vender? (E.g. 1 item, 3 itens, etc)
   utter_ask_estado:
@@ -175,6 +197,18 @@ responses:
   - text: 'Você quer vender o produto {produto} com {itens} itens, no estado {estado}, com a condição {condicao}, que possui {tempo} e com a bateria {bateria}, que custa {valor} e que tem a descrição {descricao}. Correto?'
   utter_submit_venda:
   - text: Pronto! Seu {produto} foi cadastrado com sucesso.
+  utter_ask_selecionar:
+  - text: 'Consultei todos os produtos disponíveis, e encontrei: 
+          1. {produto}, novo, cor verde, 256GB de memória por R$7099,00. 
+          2. {produto}, novo, cor starlight, 512GB de memória por R$10100,00.
+          3. {produto}, usado, cor midnight, 128GB de memória por R$4350,00.
+    Deseja selecionar algum deles?'
+  utter_ask_interesse: 
+  - text: Gostaria de comprá-lo?
+  utter_confirma_compra: 
+  - text: Você selecionou o produto {escolher_produto} para compra. Deseja prosseguir?
+  utter_submit_compra: 
+  - text: O produto {escolher_produto} foi adicionado ao seu carrinho. Prossiga com a compra na próxima tela. Obrigado por escolher o JAM e até a próxima!
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -182,6 +216,7 @@ actions:
 - action_restart_values
 - action_find_cep
 - action_hello_world
+- utter_desafia_bot
 - utter_ask_cep
 - utter_ask_complemento
 - utter_ask_nome
@@ -204,3 +239,8 @@ actions:
 - utter_ask_valor
 - utter_ask_descricao
 - utter_confirma_venda
+- utter_submit_venda
+- utter_ask_selecionar
+- utter_ask_interesse
+- utter_confirma_compra
+- utter_submit_compra

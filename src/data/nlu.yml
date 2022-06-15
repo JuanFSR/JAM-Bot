@@ -315,7 +315,6 @@ nlu:
     - sem descrição
     - não possui descrição
     - celular em ótima qualidade, inclui capa protetora, fone de ouvido original e carregador original, tudo dentro da caixa que foi enviado
-
 - intent: venda_revisao
   examples: |
     - quero [rever a informação](revisao) sobre [bateria](revisao_tipo)

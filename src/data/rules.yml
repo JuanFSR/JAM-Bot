@@ -78,4 +78,23 @@ rules:
     - requested_slot: null #slots preenchidos
   - action: utter_confirma_venda
   - intent: afirmacao
-  - action: utter_submit
+  - action: utter_submit_venda
+
+# -- Compra --
+- rule: Activate Compra Form
+  steps:
+  - intent: comprar
+  - action: compra_form
+  - active_loop: compra_form
+
+- rule: Submit Compra Form
+  condition: #Considerando que este form está ativo
+  - active_loop: compra_form
+  steps:
+  - action: compra_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null #slots preenchidos
+  - action: utter_confirma_compra
+  - intent: afirmacao
+  - action: utter_submit_compra
