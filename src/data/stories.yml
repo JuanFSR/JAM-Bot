@@ -9,6 +9,7 @@ stories:
   - action: utter_cadastro
   - intent: negacao
   - action: utter_despedida
+  - action: action_restart
 
 # criar intent de mudar cadastro
 # o campo que a pessoa quer mudar é uma entidade

@@ -244,3 +244,4 @@ actions:
 - utter_ask_interesse
 - utter_confirma_compra
 - utter_submit_compra
+- action_restart

@@ -33,6 +33,7 @@ rules:
   - action: action_restart_values
   - intent: negacao
   - action: utter_despedida
+  - action: action_restart
 
 # --- FORMS ---
 # -- Cadastro --
