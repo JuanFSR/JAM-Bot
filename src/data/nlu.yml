@@ -90,13 +90,19 @@ nlu:
   examples: |
     - quero [vender](venda) um celular
     - quero [vender](venda) meu celular
+    - quero [vender](venda)
+    - desejo [vender](venda) um celular
+    - desejo [vender](venda) meu celular
+    - gostaria de [vender](venda) um celular
     - gostaria de [vender](venda) meu celular
+    - gostaria de [vender](venda)
+    - eu quero [vender](venda)
+    - eu desejo [vender](venda)
+    - eu gostaria de [vender](venda)
     - colocar produto [a venda](venda)
     - [vendo](venda) um celular
     - [vendo](venda) celulares
-    - como que [vendo](venda)
     - [venda](venda) celular
-    - quero [vender](venda)
     - [vender](venda)
     - [venda](venda)
 - intent: produto
@@ -110,6 +116,7 @@ nlu:
     - [iphone 8](produto)
     - [celular](produto)
     - [iphone](produto)
+    - [iphone 13 pro max](produto)
 - intent: venda_itens
   examples: |
     - somente [1](itens)
