@@ -357,12 +357,11 @@ nlu:
     - eu quero o [preço]{"entity": "preferencia", "group": "1"} mais baixo e a [localizacao]{"entity": "preferencia", "group": "1"}
 - intent: selecionar_produto
   examples: |
-    - quero o produto [1](escolher_produto)
-    - produto [2](escolher_produto)
-    - [nao](escolher_produto) quero selecionar
-    - [1](escolher_produto)
-    - quero selecionar o produto [um](escolher_produto)
-    - produto [um](escolher_produto)
+    - opção [1](escolher_produto)
+    - opção [2](escolher_produto)
+    - Opção [1](escolher_produto)
+    - opcao [3](escolher_produto)
+    - opçao [2](escolher_produto)
 - intent: interesse_produto
   examples: |
     - me interesso no produto
@@ -469,7 +468,7 @@ nlu:
     - custo beneficio
     - custo-benefício
     - custo benefício
-- synonym: estado_novo
+- synonym: novo
   examples: |
     - novo
     - ta muito bom
@@ -482,7 +481,7 @@ nlu:
     - NOVO
     - foda
     - top
-- synonym: estado_ruim
+- synonym: usado
   examples: |
     - usado
     - foi bastante usado

@@ -35,6 +35,12 @@ rules:
   - action: utter_despedida
   - action: action_restart
 
+- rule: despedir do bot
+  steps: 
+  - intent: despedida
+  - action: utter_despedida
+  - action: action_restart
+
 # --- FORMS ---
 # -- Cadastro --
 - rule: Activate Cadastro Form

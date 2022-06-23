@@ -15,9 +15,7 @@ intents:
 - venda_estado
 - venda_condicoes
 - venda_tempo
-- venda_bateria
 - venda_valor
-- venda_descricao
 - comprar
 - selecionar_produto
 - interesse_produto
@@ -90,25 +88,13 @@ slots:
     mappings:
     - type: from_text
       intent: venda_tempo
-  bateria: 
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_text
-      intent: venda_bateria
   valor:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: valor
-  descricao:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_text
-      intent: venda_descricao
-  selecionar:
+  selecao:
     type: text
     influence_conversation: true
     mappings:
@@ -134,14 +120,11 @@ forms:
     - estado
     - condicao
     - tempo
-    - bateria
     - valor
-    - descricao
   compra_form:
     required_slots:
     - produto
-    - selecionar
-    - interesse
+    - selecao
 responses:
   utter_cumprimento:
   - text: Olá, eu sou o JAM, tudo bem? Estava conversando com {nome} da última vez. É você?
@@ -187,24 +170,28 @@ responses:
   - text: Qual a condição em que o produto se encontra? (E.g. possui algumas marcas de uso, está sem arranhões, etc.)
   utter_ask_tempo:
   - text: Há quanto tempo você possui este produto? (E.g. 1 ano, 3 meses, desde 2019, etc.)
-  utter_ask_bateria:
-  - text: Como está a bateria do {produto}? (E.g. a bateria está boa, a bateria não dura muito etc.)
   utter_ask_valor:
   - text: Qual será o valor de venda do produto? (E.g. R$ 1000,00, 1500 reais)
-  utter_ask_descricao:
-  - text: Deseja adicionar uma descrição sobre o produto? (E.g. Vem com carregador e fone, acompanha capinhas, etc.)
   utter_confirma_venda:
-  - text: 'Você quer vender o produto {produto} com {itens} itens, no estado {estado}, com a condição {condicao}, que possui {tempo} e com a bateria {bateria}, que custa {valor} e que tem a descrição {descricao}. Correto?'
+  - text: 'Você quer vender o produto {produto} com {itens} itens, no estado {estado}, com a condição {condicao}, que possui {tempo} e que custa {valor}. Correto?'
   utter_submit_venda:
   - text: Pronto! Seu {produto} foi cadastrado com sucesso.
-  utter_ask_selecionar:
-  - text: 'Consultei todos os produtos disponíveis, e encontrei: 
-          1. {produto}, novo, cor verde, 256GB de memória por R$7099,00. 
-          2. {produto}, novo, cor starlight, 512GB de memória por R$10100,00.
-          3. {produto}, usado, cor midnight, 128GB de memória por R$4350,00.
+  utter_ask_selecao:
+  - buttons:
+    - payload: '/selecionar_produto{{"escolher_produto":"1"}}'
+      title: Opção 1
+    - payload: '/selecionar_produto{{"escolher_produto":"2"}}'
+      title: Opção 2
+    - payload: '/selecionar_produto{{"escolher_produto":"3"}}'
+      title: Opção 3
+    - payload: /negacao
+      title: Nenhuma opção
+    button_type: vertical
+    text: 'Consultei todos os produtos disponíveis, e encontrei: 
+  1. {produto}, novo, cor verde, 256GB de memória por R$7099,00.  
+  2. {produto}, novo, cor starlight, 512GB de memória por R$10100,00. 
+  3. {produto}, usado, cor midnight, 128GB de memória por R$4350,00. 
     Deseja selecionar algum deles?'
-  utter_ask_interesse: 
-  - text: Gostaria de comprá-lo?
   utter_confirma_compra: 
   - text: Você selecionou o produto {escolher_produto} para compra. Deseja prosseguir?
   utter_submit_compra: 
@@ -240,7 +227,7 @@ actions:
 - utter_ask_descricao
 - utter_confirma_venda
 - utter_submit_venda
-- utter_ask_selecionar
+- utter_ask_selecao
 - utter_ask_interesse
 - utter_confirma_compra
 - utter_submit_compra
